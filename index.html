@@ -5,13 +5,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="icon.png" type="image/png">
     <link rel="stylesheet" href="main.css">
+    <script defer src="scripts.js"></script>
     <title>Hare Krishna</title>
 </head>
-<body style="text-align: center;font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;background-color: rgba(0, 0, 0, 0.863);">
-    <div class="loader-body">
-        <div class="text"><h1 style=" color: rgb(210, 237, 195); animation: glow 1s ease-in-out infinite alternate;">Working on It...</h1></div>
-        <div class="loader"></div>
-    </div>
-    
+<body>
+    <header>
+        <h1>Fun Zone</h1>
+        <p>Welcome! Choose a game or tool and start having fun!</p>
+        <nav>
+            <ul>
+                <li><a href="#tic-tac-toe" class="nav-link">Tic-Tac-Toe</a></li>
+                <li><a href="#guess-the-number" class="nav-link">Guess the Number</a></li>
+                <li><a href="#rock-paper-scissors" class="nav-link">Rock-Paper-Scissors</a></li>
+                <li><a href="#calculator" class="nav-link">Calculator</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Tic-Tac-Toe Section -->
+        <section id="tic-tac-toe" class="section tic-tac-toe-section">
+            <h2>Tic-Tac-Toe</h2>
+            <p id="tic-tac-toe-status">Player X's turn</p>
+            <div class="tic-tac-toe-board">
+                <div class="cell" data-index="0"></div>
+                <div class="cell" data-index="1"></div>
+                <div class="cell" data-index="2"></div>
+                <div class="cell" data-index="3"></div>
+                <div class="cell" data-index="4"></div>
+                <div class="cell" data-index="5"></div>
+                <div class="cell" data-index="6"></div>
+                <div class="cell" data-index="7"></div>
+                <div class="cell" data-index="8"></div>
+            </div>
+            <button id="tic-tac-toe-reset">Restart Game</button>
+        </section>
+
+        <!-- Guess the Number Section -->
+        <section id="guess-the-number" class="section hidden">
+            <h2>Guess the Number</h2>
+            <p>Guess a number between 1 and 100!</p>
+            <input type="number" id="guess-input" placeholder="Enter your guess">
+            <button id="guess-btn">Submit</button>
+            <p id="guess-message"></p>
+            <button id="restart-guess">Restart Game</button>
+        </section>
+
+        <!-- Rock-Paper-Scissors Section -->
+        <section id="rock-paper-scissors" class="section hidden">
+            <h2>Rock-Paper-Scissors</h2>
+            <p>Play against the computer!</p>
+            <button class="rps-btn" data-choice="rock">Rock</button>
+            <button class="rps-btn" data-choice="paper">Paper</button>
+            <button class="rps-btn" data-choice="scissors">Scissors</button>
+            <p id="rps-result"></p>
+        </section>
+
+        <!-- Calculator Section -->
+        <section id="calculator" class="section hidden">
+            <h2>Calculator</h2>
+            <p>Perform basic arithmetic operations.</p>
+            <div id="calculator-container">
+                <input type="text" id="calc-display" readonly>
+                <div class="calc-buttons">
+                    <button class="btn">7</button>
+                    <button class="btn">8</button>
+                    <button class="btn">9</button>
+                    <button class="btn">/</button>
+                    <button class="btn">4</button>
+                    <button class="btn">5</button>
+                    <button class="btn">6</button>
+                    <button class="btn">*</button>
+                    <button class="btn">1</button>
+                    <button class="btn">2</button>
+                    <button class="btn">3</button>
+                    <button class="btn">-</button>
+                    <button class="btn">0</button>
+                    <button class="btn">.</button>
+                    <button class="btn">=</button>
+                    <button class="btn">+</button>
+                </div>
+            </div>
+        </section>
+        
+        
+    </main>
+    <footer>
+        <p>&copy; 2025 Rajan's Fun Zone. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>

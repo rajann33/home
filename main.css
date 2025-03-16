@@ -1,48 +1,217 @@
-.loader-body {
-    margin-top: 10%;
-    position: fixed;
+/* General Website Styles */
+body {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    height: 100vh;
-    width: 100%;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #fff; /* White text for contrast against the gradient */
+    background: linear-gradient(135deg, #1e90ff, #32cd32, #9370db); /* Gradient: blue, green, purple */
+    background-size: 400% 400%;
+    animation: gradient-animation 10s ease infinite; /* Smooth animation for dynamic feel */
 }
 
-.loader {
-    position: relative;
-    width: 100px;
-    height: 100px;
+/* Gradient Animation */
+@keyframes gradient-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+header {
+    padding: 20px;
+    font-size: 24px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow for better readability */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
     display: flex;
-    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; /* Wrap navigation links for smaller screens */
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.2);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+main {
+    flex: 1; /* Pushes the footer down if the content is insufficient */
+    padding: 20px; /* Adds space around the content */
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent dark background */
+    color: white;
+    padding: 15px;
+    font-size: 14px;
+    text-align: center;
+    width: 100%; /* Ensures it spans the full width */
+    position: relative; /* Default positioning to stay in flow with the body */
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow above the footer */
+}
+
+/* Section Styles */
+.section {
+    display: none;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Adds a soft shadow to the sections */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black for contrast */
+}
+
+.section.active {
+    display: block;
+}
+
+/* Responsive Grid Layouts */
+.calc-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Adjusts to 3-column layout on smaller screens */
+    gap: 10px;
+    justify-content: center;
+    margin: 20px auto;
+}
+.tic-tac-toe-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px); /* 3 columns for the grid */
+    gap: 10px;
+    margin: 20px auto; /* Automatically centers horizontally */
     justify-content: center;
 }
 
-.loader::before,
-.loader::after {
-    content: "";
-    position: absolute;
+@media (min-width: 768px) {
+    .calc-buttons {
+        grid-template-columns: repeat(4, 1fr); /* 4-column layout for wider screens */
+    }
+}
+
+/* Buttons - General */
+button, .btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover, .btn:hover {
+    transform: scale(1.05);
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Tic-Tac-Toe Styles */
+.tic-tac-toe-board .cell {
     width: 100px;
     height: 100px;
-    border-radius: 50%;
-    border-top: 3px solid #03fcfc;
+    border: 2px solid #fff;
+    background: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-.loader::before {
-    border-bottom: 3px solid #f303fc;
-    animation: spin 2.4s linear infinite;
+.tic-tac-toe-board .cell:hover {
+    background: rgba(255, 255, 255, 0.1);
 }
 
-.loader::after {
-    border-top: 3px solid transparent;
-    border-bottom: 3px solid transparent;
-    animation: spin 2s linear infinite reverse;
+/* Guess the Number Styles */
+#guess-the-number input {
+    padding: 15px;
+    font-size: 18px;
+    width: 70%;
+    max-width: 300px;
+    margin: 10px 0;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    text-align: center;
 }
 
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+#guess-btn, #restart-guess {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    border-radius: 50px;
+    transition: transform 0.3s, background 0.3s;
+}
+
+#guess-btn:hover, #restart-guess:hover {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.4);
+}
+
+/* Rock-Paper-Scissors Styles */
+.rps-btn {
+    padding: 15px 30px;
+    font-size: 16px;
+    margin: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    color: #fff;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.rps-btn:hover {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.4);
+}
+
+/* Calculator Styles */
+#calc-display {
+    width: 100%;
+    height: 60px;
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-align: right;
+    border: none;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    padding: 0 15px;
+}
+
+.calc-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Ensures 4 columns */
+    gap: 10px;
+}
+
+.calc-buttons .btn {
+    width: 80px;
+    height: 80px;
+    font-size: 20px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+.calc-buttons .btn:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.4);
 }
