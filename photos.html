@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="!scroll-smooth">
 
 <head>
-    <link rel="icon" href="icon.png" type="image/png">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
@@ -10,30 +10,38 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&family=Poppins:wght@600&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
     <link rel="stylesheet" href="./src/output.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Our Gallery</title>
 
 
 </head>
 
-<body class="  font-Montserrat max-w-[100%] relative text-[#3e3010]  ">
-       <a href="#Top"><div id="UpButton" class="hidden z-30 fixed bottom-0 right-0 text-3xl text-[#000] p-2"><img class="size-14 hover:transform hover:scale-105 duration-300" src="./images/Upp.png"  ></div></a>
+<body class=" font-Montserrat max-w-[100%] relative text-[#3e3010]  ">
 
-   <section  class=" slidingNAV no-scrollbar select-none hidden h-screen overflow-y-scroll bg-gradient-to-b from-[#fff] w-full via-[#bac30d39] via-30% to-[#95e72339] to-[150%] backdrop-blur-[15px]  sm:w-[300px] md:w-[440px] float-end  fixed right-0 contain-cover min-h-[100%] shadow-2xl top-0 z-50 [box-shadow:-10px_0_20px_-5px_rgba(156,104,31,0.6)]">
+
+    <div id="FullScreenImage" class=" hidden fixed z-50 h-screen w-[100%] p-4 sm:p-5 lg:p-6 object-contain bg-[#00000046] backdrop-blur-xs  justify-center items-center">
+        
+    <img src="./Product.png" class="max-h-full max-w-full grow shrink object-contain  " alt="">   
+     <div class="absolute right-0 top-0 p-4 cursor-pointer text-6xl font-semibold text-shadow-2xs shadow-white text-[#1d1d1d] hover:transform duration-200 hover:text-[#bbb] " onclick=hidephoto()>&times; </div>
+                           
+    </div>
+
+
+ <a href="#Top"><div id="UpButton" class="hidden z-30 fixed bottom-0 right-0 text-3xl text-[#000] p-2"><img class="size-14 hover:transform hover:scale-105 duration-300" src="./images/Upp.png"  ></div></a>
+     <section
+        class=" slidingNAV no-scrollbar select-none hidden h-screen overflow-y-scroll bg-gradient-to-b from-[#fff] w-full via-[#bac30d39] via-30% to-[#95e72339] to-[150%] backdrop-blur-[15px]  sm:w-[300px] md:w-[440px] float-end  fixed right-0 contain-cover min-h-[100%] shadow-2xl top-0 z-50 [box-shadow:-10px_0_20px_-5px_rgba(156,104,31,0.6)]">
     
             <nav class="w-full">
                 <div class=" peer-checked:hidden flex justify-between w-full  px-6 pt-6 sm:px-8 sm:pt-8 ">
-                    <a class="w-[70%] " href="#Top"><img src="../images/Logo.png" alt="" ></a>
-                    <div class="flex items-center text-5xl text-shadow-2xs shadow-white" onclick=hidemenu()>&times;</div>
+                    <a class="w-[70%] " href="index.html"><img src="./images/Logo.png" alt="" ></a>
+                    <div class="flex items-center text-5xl" onclick=hidemenu()>&times;</div>
                 </div>
                 <div class="flex flex-col justify-center items-center object-contain inset-0 my-8">
                     <div
-                        class="  text-center text-[#ae232b] font-[var(--font-custom)] text-4xl    [text-shadow:0_0_4px_rgba(255,255,0,0.8)] ">
-                        <a href="#Top"><li onclick=hidemenu() class="  py-5 px-3 w-full text-3xl ">Home</li></a>
+                        class=" text-center text-[#ae232b] font-[var(--font-custom)] text-4xl    [text-shadow:0_0_4px_rgba(255,255,0,0.8)] ">
+                        <a href="index.html"><li onclick=hidemenu() class="  py-5 px-3 w-full text-3xl ">Home</li></a>
                         <a href="aboutus.html"><li onclick="hidemenu()" class="border-t  border-black py-5 px-3 w-full text-3xl">About Us</li></a>
                         <div class="peer">
                             <input type="radio" name="options" id="menu-toggle1" class="peer hidden" />
@@ -54,8 +62,7 @@
                                         Release</li></a>
                                 </div>
                         </div>
- <a href="photos.html"><li onclick="hidemenu()" class="border-t  border-black py-5 px-3 w-full text-3xl">
-                           Our Gallery</li></a>
+ 
                       <a href="blogs.html"><li onclick="hidemenu()" class="border-t  border-b border-black py-5 px-3 w-full text-3xl">
                            Our Full Blogs</li></a>
                         <a href="#contactUs"><li onclick="hidemenu()" class="border-b  border-black py-5 px-3 w-full text-3xl">
@@ -170,7 +177,6 @@
 
     </div>
 
-    
     <section id="LandingAndNav Top" 
         class=" navigation  flex flex-col justify-center items-center  overflow-hidden relative ">
 
@@ -178,7 +184,7 @@
         <nav id="navbar"
             class=" bg-[linear-gradient(180deg,_rgba(0,0,0,0.5)_0%,_rgba(237,221,83,0)_100%)] animate-slideIn  md:opacity-90 absolute z-40 top-0 flex justify-between items-center  w-[100vw]  max-sm:px-6 mx-1 px-16 fill-[#c2eb68] text-[#c2eb68]  object-contain">
             <li class=" hover:opacity-100">
-                <a href="#Top"><img id="logoid" src="./images/Logo.png" alt="" class="my-2 w-56 lg:w-72 hover:opacity-100 object-contain "></a>
+                <a href="index.html"><img id="logoid" src="./images/Logo.png" alt="" class="my-2 w-56 lg:w-72 hover:opacity-100 object-contain "></a>
             </li>
             <div class="flex gap-4">
                 <div class="flex gap-3">
@@ -232,64 +238,19 @@
 
 
 
-    <section id="story" class=" bg-[#94bb41] -z-10 overflow-x-clip">
-        <div style="animation-range-start:initial; " id="animatedDiv"
-            class="  flex max-sm:flex-col-reverse px-2 sm:px-5 py-10 lg:px-14 lg:pt-14  xl:pt-20  ">
-            <div id="cup"
-                class="AnimateMe transform -translate-x-[80%] flex flex-col justify-center sm:flex-1/2 items-center  w-full">
-                <img class=" max-sm:h-96 max-sm:object-contain w-full" src="./images/TeaCover.png" alt="TeaImage">
-            </div>
-            <div id="AnimateMe" class="AnimateMe transform translate-x-[80%] opacity-0 p-2 flex-1/2 ">
-                <h2 class="mb-5 text-5xl font-bold text-[#ce4c07]">Our Story</h2>
-                <p
-                    class=" text-[#181307]  font-Montserrat mb-9  text-xl line-clamp-6 sm:line-clamp-5">
-                    Welcome to Current, a leading name in the world of noodles and snacks, crafting culinary delights
-                    that resonate with flavors of innovatio n and quality. Established in 2017, our journey began in the
-                    heart of Nepal, where we set out on a mission to redefine the snacking experience.</p>
-                <p class="text-xl mb-9 text-[#181307] line-clamp-6 sm:line-clamp-5 ">
-                    Current is a
-                    proud creation of Yashoda Foods Pvt. Ltd., a parent company with a legacy of culinary
-                    excellence. Established in Nepal, our brand has been on a journey to redefine the snacking
-                    experience since its inception in 2017. Two of our state-of-the-art manufacturing facilities in
-                    Rupandehi and Kapilvastu, Nepal are at the heart of our operations.</p>
+  
 
-               <a href="aboutus.html#story"> <button class="bg-[#ce4c07] text-white text-[24px]  w-56 h-14 rounded-full cursor-pointer">Read
-                    More</button></a>
-            </div>
-        </div>
-
-
-    </section>
-
-    <section class=" w-full bg-[url('../images/bgKitchen.jpg')] bg-cover relative overflow-clip p-0 m-0 ">
-        <svg class="w-full absolute  max-sm:-mt-[2.2px] z-10  " viewBox="0 0 1200 100" xmlns="http://www.w3.org/2000/svg">
-            <polygon class="float-start" style="fill:#94bb41;" points="0,0 1200,0 0,100"></polygon>
-        </svg>
-        <h2 class="max-sm:py-20 pt-36 text-4xl sm:text-5xl lg:text-[55px] text-[#ce4c07] font-bold text-center">
-            Our Best
-        </h2>
-        <div id="kitchen22" class="w-full  relative AnimateMe flex justify-center items-end ">
-            <div  id="kitchen2" class=" flex justify-center items-top  w-full">
-            <img  class="object-contain py-32 sm:w-2/3 md:w-1/2 " src="./images/DigitalTea.png" alt="">
-            <img src="./images/tealeaves.png" class=" absolute max-sm:size-24 size-30 transform -translate-y-0 translate-x-20  animate-tealeave" alt="">
-            <img src="./images/tealeaves2.png" class=" absolute max-sm:size-20 size-28 transform translate-y-20 -scale-100  -translate-x-28  animate-tealeave" alt=""> 
-            <img src="./images/tealeaves3.png" class=" absolute max-sm:size-30 size-44 transform   -translate-x-0   animate-scaleup" alt=""> 
-             <img src="./images/tealeaves4.png" class="absolute max-h-full -z-20  " alt="">
-        </div>
-    </div>  
-       
-    </section>
-
-    <section class=" Photos p-14 pb-16 sm:p-24 md:p-14 text-center text-[#ce4c07] bg-[#94bb41] w-[100%] overflow-clip transform ">
+    <section id="SelectGallery" class=" Photos pt-16 px-3  sm:px-12 text-[#ce4c07] bg-[#94bb41] w-[100%] overflow-clip transform ">
+        <div class="text px-6  sm:px-5 ">
         <h3 class="text-4xl font-semibold [text-shadow:0_0_6px_rgba(255,255,0,0.8)] "> <span
                 class="text-[#e5d92b]  [text-shadow:0_0_5px_rgba(0,0,0,1)]">Chiya </span>Bagan</h3>
-        <h3 class="text-3xl font-semibold [text-shadow:0_0_4px_rgba(150,300,0,0.8)]  mb-10">Photos</h3>
+        <h3 class="text-3xl font-semibold [text-shadow:0_0_4px_rgba(150,300,0,0.8)] pt-1 mb-10">Our Gallery</h3>
+</div>
+        <div  class="select-none grid max-md:grid-cols-1 grid-cols-2 lg:grid-cols-3 gap-16 sm:gap-20 md:gap-24 "  >
 
-        <div class="select-none grid max-md:grid-cols-1 grid-cols-2 lg:grid-cols-3 gap-16 sm:gap-20 md:gap-24   ">
 
 
-
-         <div class="text-white/50 border shadow-md -translate-y-1 -translate-x-6 bg-[#94bb41]   -rotate-3  rounded-[8px] ">
+         <div  id="Select1" class=" text-white/50 border shadow-md -translate-y-1 -translate-x-6 bg-[#94bb41]    -rotate-3  rounded-[8px] ">
             <svg onclick="leftclick(1)" class="absolute top-0 left-0 p-1 fill-[#ffe5c2] hover:fill-[#ce4c07]"  height="32px" width="32px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 96.3 96.3" xml:space="preserve" transform="rotate(0)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
             </g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M48.416,50.3c6.6,2.2,13.3,1,20,1.4c0.3,0,0.8-0.7,0.9-1.1c0.3-1-0.1-1.8-0.6-2.4c-1.9-2-4.1-2.9-6.4-3.1 c-5.5-0.6-11.1-1.4-16.6-0.8c-0.7-0.1-1.4-0.2-2.1-0.2c-2.8-0.2-5.6-0.3-8.3-0.2c2.1-2,3.9-4,5.5-6.4c0.7-1,0.8-2.3-0.6-3.5 c-1.2-1.1-2.6-1.3-3.7-0.6c-1.8,1.3-3.6,2.6-5.2,4.2c-2.5,2.6-4.7,5.4-7.1,8.1l0,0l0,0c-1.1,0.5-1.5,1.8-1,2.9l0.5,1.1 c3,5.9,8.4,9.5,12.5,14.3c0.2,0.2,1,0.1,1.4-0.2c0.9-0.5,1.2-1.3,1.2-2.1c0.2-2.7-0.8-4.9-2.2-6.6c-1.2-1.4-2.3-2.9-3.4-4.3 c1.3,0.2,2.6,0.3,3.9,0.3C41.016,50.9,44.716,50.5,48.416,50.3z"></path> <path d="M92.316,52.9c-1.7,6.3-4.6,12.6-8.9,18.3c-0.5,0.7-1.1,1.4-1.7,2.1l-0.9,1l-0.4,0.5l-0.5,0.5c-0.6,0.6-1.3,1.3-1.9,1.9 l-0.5,0.5l-0.6,0.4l-1.1,0.9c-1.3,1.2-2.9,2.2-4.4,3.3c-0.7,0.5-1.6,0.9-2.4,1.4c-0.8,0.4-1.6,1-2.4,1.3c-3.9,2-8.2,3.2-12.6,3.9 c-1.1,0.1-2.2,0.4-3.3,0.4l-1.6,0.1h-0.8h-0.4h-0.2h-0.1l0,0l-3.4-0.2l-0.9-0.1c-0.3,0-0.5-0.1-0.8-0.1l-1.6-0.3l-1.6-0.3 c-0.5-0.1-1.1-0.3-1.6-0.4l-1.6-0.4c-0.5-0.1-1.1-0.3-1.6-0.5l-3-1.2c-1-0.5-2-1-2.9-1.4c-3.8-2.1-7.3-4.7-10.4-7.8 c-3-3.1-5.5-6.8-7.4-10.6l-0.7-1.5l-0.4-0.7l-0.3-0.8l-1.1-3.1l-0.8-3.1c-0.1-0.3-0.1-0.5-0.2-0.8l-0.1-0.8l-0.2-1.6l-0.3-1.6 l-0.1-1.6l-0.1-1.6v-0.8V48v-0.2v-0.4l0.2-3.5c0.1-1.1,0.3-2.1,0.4-3.1c0.7-4.2,2.1-8.4,4.1-12.3c2.2-3.7,4.9-7.1,8-10.1 c9.9-9.4,24.6-13.2,37.8-9.8l2.5,0.6l2.4,0.9l1.2,0.4c0.4,0.2,0.8,0.4,1.2,0.5l2.3,1.1c2.9,1.7,5.8,3.5,8.3,5.8 c1.3,1.1,2.4,2.4,3.6,3.6c0.6,0.6,1.1,1.3,1.6,2s1.1,1.3,1.5,2c0.9,1.4,1.9,2.8,2.6,4.4c0.4,0.8,0.8,1.5,1.2,2.3l0.9,2.4 c2.9,7.2,3.3,14,5.2,13.4c0.8-0.3,1.4-1.9,1.8-4.7c0-1.4,0-3-0.1-4.9c-0.2-0.9-0.3-1.9-0.5-2.9c-0.1-0.5-0.2-1-0.4-1.6 c-0.2-0.5-0.4-1.1-0.5-1.6c-1.2-3.9-3.2-7.6-5.4-11.1c-1.2-1.7-2.3-3.4-3.8-4.9l-1-1.2c-0.3-0.4-0.7-0.8-1.1-1.1l-2.3-2.1 c-3.2-2.7-6.6-5.1-10.4-6.9c-1.8-1-3.8-1.6-5.8-2.4c-1-0.4-2-0.5-3-0.8s-2-0.6-3.1-0.7l-2.6-0.4l-1.3-0.2l-0.9-0.4l-2.3-0.1h-0.6 h-0.3h-0.2h-0.2l0,0l0,0h-0.1l-1.2,0.1c-1.7,0.1-3.4,0.1-5,0.4c-1.7,0.3-3.3,0.5-4.9,1c-6.5,1.6-12.6,4.6-17.9,8.8 c-5.2,4.2-9.6,9.4-12.6,15.3l-1.1,2.2c-0.3,0.8-0.7,1.5-1,2.3l-0.7,2.4l-0.4,1.2c-0.1,0.4-0.2,0.8-0.3,1.2l-0.6,2.4 c-0.1,0.4-0.2,0.8-0.3,1.2l-0.2,1.3c-0.2,1.7-0.5,3.4-0.5,4.9c-0.7,5.8-0.2,12,1.5,17.8s4.5,11.3,8.4,16.1 c3.8,4.8,8.6,8.8,14,11.8l4.2,2c1.4,0.6,2.9,1.1,4.3,1.6c1.5,0.4,3,0.8,4.5,1.2c1.5,0.3,3.2,0.5,4.7,0.8l0.6,0.1h0.5l1.1,0.1 l2.1,0.1h0.5h0.3h0.3h0.1h0.1l1.2-0.1l2.3-0.1l1.2-0.1c0.4,0,0.8-0.1,1.2-0.2l2.3-0.4c1.5-0.2,3-0.6,4.5-1 c6-1.6,11.6-4.5,16.5-8.2c4.9-3.8,9.1-8.4,12.2-13.7c0.4-0.7,0.8-1.3,1.2-2l1-2.1c0.3-0.7,0.7-1.4,1-2.1l0.8-2.2 c0.3-0.7,0.5-1.4,0.8-2.2l0.6-2.2l0.6-2.2l0.4-2.4c0.5-2.4-0.2-5.5-0.6-6.5C94.016,46.6,93.216,49.1,92.316,52.9z"></path> </g> </g> </g>
         </svg>
@@ -297,15 +258,15 @@
                 <div class="border  bg-[#94bb41] shadow-md -rotate-19 translate-y-3 translate-x-6 rounded-[8px] ">
                     <div
                         class=" w-full flex items-center border rotate-11 md:scale-105  lg:scale-100  -translate-x-3  -translate-y-3   bg-[#94bb41]  shadow-xl  p-5 md:p-3 lg:p-5 rounded-[8px]">
-                        <div class="container w-full overflow-hidden ">
-                        <a  href="photos.html#Gallery1"><div id="photoslider1" class="GalleryCollection flex h-64 md:h-80  w-full   ">
+                        <div onclick="ShowPhoto(1)"  class="container w-full overflow-hidden  ">
+                        <div id="photoslider1" class="GalleryCollection flex h-64 md:h-80 md w-full    ">
                         <img class=" images1 rounded-[8px] flex-shrink-0  w-full object-cover border-2 text-black/50 " src="./photo1/img1.png" alt="">
                          <img class=" images1 rounded-[8px] flex-shrink-0 w-full object-cover border-2 text-black/50 " src="./photo1/img2.png" alt="">
                           <img class=" images1 rounded-[8px] flex-shrink-0 w-full object-cover border-2 text-black/50 " src="./photo1/img3.webp" alt="">
                            <img class=" images1 rounded-[8px] flex-shrink-0 w-full object-cover border-2 text-black/50 " src="./photo1/img4.png" alt="">
                             <img class=" images1 rounded-[8px] flex-shrink-0 w-full object-cover border-2 text-black/50 " src="./photo1/img5.png" alt="">
                              <img class=" images1 rounded-[8px] flex-shrink-0 w-full object-cover border-2 text-black/50 " src="./photo1/img6.png" alt="">
-                            </div></a></div>
+                            </div></div>
                     </div>
                    <svg  onclick="rightclick(1)" class=" absolute bottom-0 right-0 p-2 fill-[#ffe5c2] hover:fill-[#ce4c07]"  height="40px" width="40px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 96.3 96.3" xml:space="preserve" transform="rotate(180)">
                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M48.416,50.3c6.6,2.2,13.3,1,20,1.4c0.3,0,0.8-0.7,0.9-1.1c0.3-1-0.1-1.8-0.6-2.4c-1.9-2-4.1-2.9-6.4-3.1 c-5.5-0.6-11.1-1.4-16.6-0.8c-0.7-0.1-1.4-0.2-2.1-0.2c-2.8-0.2-5.6-0.3-8.3-0.2c2.1-2,3.9-4,5.5-6.4c0.7-1,0.8-2.3-0.6-3.5 c-1.2-1.1-2.6-1.3-3.7-0.6c-1.8,1.3-3.6,2.6-5.2,4.2c-2.5,2.6-4.7,5.4-7.1,8.1l0,0l0,0c-1.1,0.5-1.5,1.8-1,2.9l0.5,1.1 c3,5.9,8.4,9.5,12.5,14.3c0.2,0.2,1,0.1,1.4-0.2c0.9-0.5,1.2-1.3,1.2-2.1c0.2-2.7-0.8-4.9-2.2-6.6c-1.2-1.4-2.3-2.9-3.4-4.3 c1.3,0.2,2.6,0.3,3.9,0.3C41.016,50.9,44.716,50.5,48.416,50.3z"></path> <path d="M92.316,52.9c-1.7,6.3-4.6,12.6-8.9,18.3c-0.5,0.7-1.1,1.4-1.7,2.1l-0.9,1l-0.4,0.5l-0.5,0.5c-0.6,0.6-1.3,1.3-1.9,1.9 l-0.5,0.5l-0.6,0.4l-1.1,0.9c-1.3,1.2-2.9,2.2-4.4,3.3c-0.7,0.5-1.6,0.9-2.4,1.4c-0.8,0.4-1.6,1-2.4,1.3c-3.9,2-8.2,3.2-12.6,3.9 c-1.1,0.1-2.2,0.4-3.3,0.4l-1.6,0.1h-0.8h-0.4h-0.2h-0.1l0,0l-3.4-0.2l-0.9-0.1c-0.3,0-0.5-0.1-0.8-0.1l-1.6-0.3l-1.6-0.3 c-0.5-0.1-1.1-0.3-1.6-0.4l-1.6-0.4c-0.5-0.1-1.1-0.3-1.6-0.5l-3-1.2c-1-0.5-2-1-2.9-1.4c-3.8-2.1-7.3-4.7-10.4-7.8 c-3-3.1-5.5-6.8-7.4-10.6l-0.7-1.5l-0.4-0.7l-0.3-0.8l-1.1-3.1l-0.8-3.1c-0.1-0.3-0.1-0.5-0.2-0.8l-0.1-0.8l-0.2-1.6l-0.3-1.6 l-0.1-1.6l-0.1-1.6v-0.8V48v-0.2v-0.4l0.2-3.5c0.1-1.1,0.3-2.1,0.4-3.1c0.7-4.2,2.1-8.4,4.1-12.3c2.2-3.7,4.9-7.1,8-10.1 c9.9-9.4,24.6-13.2,37.8-9.8l2.5,0.6l2.4,0.9l1.2,0.4c0.4,0.2,0.8,0.4,1.2,0.5l2.3,1.1c2.9,1.7,5.8,3.5,8.3,5.8 c1.3,1.1,2.4,2.4,3.6,3.6c0.6,0.6,1.1,1.3,1.6,2s1.1,1.3,1.5,2c0.9,1.4,1.9,2.8,2.6,4.4c0.4,0.8,0.8,1.5,1.2,2.3l0.9,2.4 c2.9,7.2,3.3,14,5.2,13.4c0.8-0.3,1.4-1.9,1.8-4.7c0-1.4,0-3-0.1-4.9c-0.2-0.9-0.3-1.9-0.5-2.9c-0.1-0.5-0.2-1-0.4-1.6 c-0.2-0.5-0.4-1.1-0.5-1.6c-1.2-3.9-3.2-7.6-5.4-11.1c-1.2-1.7-2.3-3.4-3.8-4.9l-1-1.2c-0.3-0.4-0.7-0.8-1.1-1.1l-2.3-2.1 c-3.2-2.7-6.6-5.1-10.4-6.9c-1.8-1-3.8-1.6-5.8-2.4c-1-0.4-2-0.5-3-0.8s-2-0.6-3.1-0.7l-2.6-0.4l-1.3-0.2l-0.9-0.4l-2.3-0.1h-0.6 h-0.3h-0.2h-0.2l0,0l0,0h-0.1l-1.2,0.1c-1.7,0.1-3.4,0.1-5,0.4c-1.7,0.3-3.3,0.5-4.9,1c-6.5,1.6-12.6,4.6-17.9,8.8 c-5.2,4.2-9.6,9.4-12.6,15.3l-1.1,2.2c-0.3,0.8-0.7,1.5-1,2.3l-0.7,2.4l-0.4,1.2c-0.1,0.4-0.2,0.8-0.3,1.2l-0.6,2.4 c-0.1,0.4-0.2,0.8-0.3,1.2l-0.2,1.3c-0.2,1.7-0.5,3.4-0.5,4.9c-0.7,5.8-0.2,12,1.5,17.8s4.5,11.3,8.4,16.1 c3.8,4.8,8.6,8.8,14,11.8l4.2,2c1.4,0.6,2.9,1.1,4.3,1.6c1.5,0.4,3,0.8,4.5,1.2c1.5,0.3,3.2,0.5,4.7,0.8l0.6,0.1h0.5l1.1,0.1 l2.1,0.1h0.5h0.3h0.3h0.1h0.1l1.2-0.1l2.3-0.1l1.2-0.1c0.4,0,0.8-0.1,1.2-0.2l2.3-0.4c1.5-0.2,3-0.6,4.5-1 c6-1.6,11.6-4.5,16.5-8.2c4.9-3.8,9.1-8.4,12.2-13.7c0.4-0.7,0.8-1.3,1.2-2l1-2.1c0.3-0.7,0.7-1.4,1-2.1l0.8-2.2 c0.3-0.7,0.5-1.4,0.8-2.2l0.6-2.2l0.6-2.2l0.4-2.4c0.5-2.4-0.2-5.5-0.6-6.5C94.016,46.6,93.216,49.1,92.316,52.9z"></path> </g> </g> </g>
@@ -315,11 +276,12 @@
             </div>
         </div>
 
-
-
-
         
-         <div class="text-white/50 border shadow-md -translate-y-1 -translate-x-6 bg-[#94bb41]   -rotate-3  rounded-[8px] ">
+        
+
+
+
+         <div id="Select2" class="text-white/50 border shadow-md -translate-y-1 -translate-x-6 bg-[#94bb41]    -rotate-3  rounded-[8px] ">
             <svg  onclick="leftclick(2)" class="absolute top-0 left-0 p-1 fill-[#ffe5c2] hover:fill-[#ce4c07]"  height="32px" width="32px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 96.3 96.3" xml:space="preserve" transform="rotate(0)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
             </g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M48.416,50.3c6.6,2.2,13.3,1,20,1.4c0.3,0,0.8-0.7,0.9-1.1c0.3-1-0.1-1.8-0.6-2.4c-1.9-2-4.1-2.9-6.4-3.1 c-5.5-0.6-11.1-1.4-16.6-0.8c-0.7-0.1-1.4-0.2-2.1-0.2c-2.8-0.2-5.6-0.3-8.3-0.2c2.1-2,3.9-4,5.5-6.4c0.7-1,0.8-2.3-0.6-3.5 c-1.2-1.1-2.6-1.3-3.7-0.6c-1.8,1.3-3.6,2.6-5.2,4.2c-2.5,2.6-4.7,5.4-7.1,8.1l0,0l0,0c-1.1,0.5-1.5,1.8-1,2.9l0.5,1.1 c3,5.9,8.4,9.5,12.5,14.3c0.2,0.2,1,0.1,1.4-0.2c0.9-0.5,1.2-1.3,1.2-2.1c0.2-2.7-0.8-4.9-2.2-6.6c-1.2-1.4-2.3-2.9-3.4-4.3 c1.3,0.2,2.6,0.3,3.9,0.3C41.016,50.9,44.716,50.5,48.416,50.3z"></path> <path d="M92.316,52.9c-1.7,6.3-4.6,12.6-8.9,18.3c-0.5,0.7-1.1,1.4-1.7,2.1l-0.9,1l-0.4,0.5l-0.5,0.5c-0.6,0.6-1.3,1.3-1.9,1.9 l-0.5,0.5l-0.6,0.4l-1.1,0.9c-1.3,1.2-2.9,2.2-4.4,3.3c-0.7,0.5-1.6,0.9-2.4,1.4c-0.8,0.4-1.6,1-2.4,1.3c-3.9,2-8.2,3.2-12.6,3.9 c-1.1,0.1-2.2,0.4-3.3,0.4l-1.6,0.1h-0.8h-0.4h-0.2h-0.1l0,0l-3.4-0.2l-0.9-0.1c-0.3,0-0.5-0.1-0.8-0.1l-1.6-0.3l-1.6-0.3 c-0.5-0.1-1.1-0.3-1.6-0.4l-1.6-0.4c-0.5-0.1-1.1-0.3-1.6-0.5l-3-1.2c-1-0.5-2-1-2.9-1.4c-3.8-2.1-7.3-4.7-10.4-7.8 c-3-3.1-5.5-6.8-7.4-10.6l-0.7-1.5l-0.4-0.7l-0.3-0.8l-1.1-3.1l-0.8-3.1c-0.1-0.3-0.1-0.5-0.2-0.8l-0.1-0.8l-0.2-1.6l-0.3-1.6 l-0.1-1.6l-0.1-1.6v-0.8V48v-0.2v-0.4l0.2-3.5c0.1-1.1,0.3-2.1,0.4-3.1c0.7-4.2,2.1-8.4,4.1-12.3c2.2-3.7,4.9-7.1,8-10.1 c9.9-9.4,24.6-13.2,37.8-9.8l2.5,0.6l2.4,0.9l1.2,0.4c0.4,0.2,0.8,0.4,1.2,0.5l2.3,1.1c2.9,1.7,5.8,3.5,8.3,5.8 c1.3,1.1,2.4,2.4,3.6,3.6c0.6,0.6,1.1,1.3,1.6,2s1.1,1.3,1.5,2c0.9,1.4,1.9,2.8,2.6,4.4c0.4,0.8,0.8,1.5,1.2,2.3l0.9,2.4 c2.9,7.2,3.3,14,5.2,13.4c0.8-0.3,1.4-1.9,1.8-4.7c0-1.4,0-3-0.1-4.9c-0.2-0.9-0.3-1.9-0.5-2.9c-0.1-0.5-0.2-1-0.4-1.6 c-0.2-0.5-0.4-1.1-0.5-1.6c-1.2-3.9-3.2-7.6-5.4-11.1c-1.2-1.7-2.3-3.4-3.8-4.9l-1-1.2c-0.3-0.4-0.7-0.8-1.1-1.1l-2.3-2.1 c-3.2-2.7-6.6-5.1-10.4-6.9c-1.8-1-3.8-1.6-5.8-2.4c-1-0.4-2-0.5-3-0.8s-2-0.6-3.1-0.7l-2.6-0.4l-1.3-0.2l-0.9-0.4l-2.3-0.1h-0.6 h-0.3h-0.2h-0.2l0,0l0,0h-0.1l-1.2,0.1c-1.7,0.1-3.4,0.1-5,0.4c-1.7,0.3-3.3,0.5-4.9,1c-6.5,1.6-12.6,4.6-17.9,8.8 c-5.2,4.2-9.6,9.4-12.6,15.3l-1.1,2.2c-0.3,0.8-0.7,1.5-1,2.3l-0.7,2.4l-0.4,1.2c-0.1,0.4-0.2,0.8-0.3,1.2l-0.6,2.4 c-0.1,0.4-0.2,0.8-0.3,1.2l-0.2,1.3c-0.2,1.7-0.5,3.4-0.5,4.9c-0.7,5.8-0.2,12,1.5,17.8s4.5,11.3,8.4,16.1 c3.8,4.8,8.6,8.8,14,11.8l4.2,2c1.4,0.6,2.9,1.1,4.3,1.6c1.5,0.4,3,0.8,4.5,1.2c1.5,0.3,3.2,0.5,4.7,0.8l0.6,0.1h0.5l1.1,0.1 l2.1,0.1h0.5h0.3h0.3h0.1h0.1l1.2-0.1l2.3-0.1l1.2-0.1c0.4,0,0.8-0.1,1.2-0.2l2.3-0.4c1.5-0.2,3-0.6,4.5-1 c6-1.6,11.6-4.5,16.5-8.2c4.9-3.8,9.1-8.4,12.2-13.7c0.4-0.7,0.8-1.3,1.2-2l1-2.1c0.3-0.7,0.7-1.4,1-2.1l0.8-2.2 c0.3-0.7,0.5-1.4,0.8-2.2l0.6-2.2l0.6-2.2l0.4-2.4c0.5-2.4-0.2-5.5-0.6-6.5C94.016,46.6,93.216,49.1,92.316,52.9z"></path> </g> </g> </g>
         </svg>
@@ -327,15 +289,15 @@
                 <div class="border  bg-[#94bb41] shadow-md -rotate-19 translate-y-3 translate-x-6 rounded-[8px] ">
                     <div
                         class=" w-full flex items-center border rotate-11 md:scale-105  lg:scale-100  -translate-x-3  -translate-y-3   bg-[#94bb41]  shadow-xl  p-5 md:p-3 lg:p-5 rounded-[8px]">
-                        <div  class="container w-full overflow-hidden ">
-                        <a  href="photos.html#Select2"><div id="photoslider2" class="GalleryCollection flex h-64 md:h-80 md w-full   ">
+                        <div class="container w-full overflow-hidden ">
+                       <div onclick="ShowPhoto(2)" id="photoslider2" class="GalleryCollection  flex h-64 md:h-80 md w-full   ">
                         <img class=" images2 rounded-[8px] flex-shrink-0  w-full object-cover border-2 text-black/50 " src="./photo2/img1.png" alt="">
                          <img class=" images2 rounded-[8px] flex-shrink-0 w-full object-cover border-2 text-black/50 " src="./photo2/img2.png" alt="">
                           <img class=" images2 rounded-[8px] flex-shrink-0 w-full object-cover border-2 text-black/50 " src="./photo2/img3.webp" alt="">
                            <img class=" images2 rounded-[8px] flex-shrink-0 w-full object-cover border-2 text-black/50 " src="./photo2/img4.png" alt="">
                             <img class=" images2 rounded-[8px] flex-shrink-0 w-full object-cover border-2 text-black/50 " src="./photo2/img5.png" alt="">
                              <img class=" images2 rounded-[8px] flex-shrink-0 w-full object-cover border-2 text-black/50 " src="./photo2/img6.png" alt="">
-                            </div></a></div>
+                            </div></div>
                     </div>
                    <svg   onclick="rightclick(2)" class=" absolute bottom-0 right-0 p-2 fill-[#ffe5c2] hover:fill-[#ce4c07]"  height="40px" width="40px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 96.3 96.3" xml:space="preserve" transform="rotate(180)">
                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M48.416,50.3c6.6,2.2,13.3,1,20,1.4c0.3,0,0.8-0.7,0.9-1.1c0.3-1-0.1-1.8-0.6-2.4c-1.9-2-4.1-2.9-6.4-3.1 c-5.5-0.6-11.1-1.4-16.6-0.8c-0.7-0.1-1.4-0.2-2.1-0.2c-2.8-0.2-5.6-0.3-8.3-0.2c2.1-2,3.9-4,5.5-6.4c0.7-1,0.8-2.3-0.6-3.5 c-1.2-1.1-2.6-1.3-3.7-0.6c-1.8,1.3-3.6,2.6-5.2,4.2c-2.5,2.6-4.7,5.4-7.1,8.1l0,0l0,0c-1.1,0.5-1.5,1.8-1,2.9l0.5,1.1 c3,5.9,8.4,9.5,12.5,14.3c0.2,0.2,1,0.1,1.4-0.2c0.9-0.5,1.2-1.3,1.2-2.1c0.2-2.7-0.8-4.9-2.2-6.6c-1.2-1.4-2.3-2.9-3.4-4.3 c1.3,0.2,2.6,0.3,3.9,0.3C41.016,50.9,44.716,50.5,48.416,50.3z"></path> <path d="M92.316,52.9c-1.7,6.3-4.6,12.6-8.9,18.3c-0.5,0.7-1.1,1.4-1.7,2.1l-0.9,1l-0.4,0.5l-0.5,0.5c-0.6,0.6-1.3,1.3-1.9,1.9 l-0.5,0.5l-0.6,0.4l-1.1,0.9c-1.3,1.2-2.9,2.2-4.4,3.3c-0.7,0.5-1.6,0.9-2.4,1.4c-0.8,0.4-1.6,1-2.4,1.3c-3.9,2-8.2,3.2-12.6,3.9 c-1.1,0.1-2.2,0.4-3.3,0.4l-1.6,0.1h-0.8h-0.4h-0.2h-0.1l0,0l-3.4-0.2l-0.9-0.1c-0.3,0-0.5-0.1-0.8-0.1l-1.6-0.3l-1.6-0.3 c-0.5-0.1-1.1-0.3-1.6-0.4l-1.6-0.4c-0.5-0.1-1.1-0.3-1.6-0.5l-3-1.2c-1-0.5-2-1-2.9-1.4c-3.8-2.1-7.3-4.7-10.4-7.8 c-3-3.1-5.5-6.8-7.4-10.6l-0.7-1.5l-0.4-0.7l-0.3-0.8l-1.1-3.1l-0.8-3.1c-0.1-0.3-0.1-0.5-0.2-0.8l-0.1-0.8l-0.2-1.6l-0.3-1.6 l-0.1-1.6l-0.1-1.6v-0.8V48v-0.2v-0.4l0.2-3.5c0.1-1.1,0.3-2.1,0.4-3.1c0.7-4.2,2.1-8.4,4.1-12.3c2.2-3.7,4.9-7.1,8-10.1 c9.9-9.4,24.6-13.2,37.8-9.8l2.5,0.6l2.4,0.9l1.2,0.4c0.4,0.2,0.8,0.4,1.2,0.5l2.3,1.1c2.9,1.7,5.8,3.5,8.3,5.8 c1.3,1.1,2.4,2.4,3.6,3.6c0.6,0.6,1.1,1.3,1.6,2s1.1,1.3,1.5,2c0.9,1.4,1.9,2.8,2.6,4.4c0.4,0.8,0.8,1.5,1.2,2.3l0.9,2.4 c2.9,7.2,3.3,14,5.2,13.4c0.8-0.3,1.4-1.9,1.8-4.7c0-1.4,0-3-0.1-4.9c-0.2-0.9-0.3-1.9-0.5-2.9c-0.1-0.5-0.2-1-0.4-1.6 c-0.2-0.5-0.4-1.1-0.5-1.6c-1.2-3.9-3.2-7.6-5.4-11.1c-1.2-1.7-2.3-3.4-3.8-4.9l-1-1.2c-0.3-0.4-0.7-0.8-1.1-1.1l-2.3-2.1 c-3.2-2.7-6.6-5.1-10.4-6.9c-1.8-1-3.8-1.6-5.8-2.4c-1-0.4-2-0.5-3-0.8s-2-0.6-3.1-0.7l-2.6-0.4l-1.3-0.2l-0.9-0.4l-2.3-0.1h-0.6 h-0.3h-0.2h-0.2l0,0l0,0h-0.1l-1.2,0.1c-1.7,0.1-3.4,0.1-5,0.4c-1.7,0.3-3.3,0.5-4.9,1c-6.5,1.6-12.6,4.6-17.9,8.8 c-5.2,4.2-9.6,9.4-12.6,15.3l-1.1,2.2c-0.3,0.8-0.7,1.5-1,2.3l-0.7,2.4l-0.4,1.2c-0.1,0.4-0.2,0.8-0.3,1.2l-0.6,2.4 c-0.1,0.4-0.2,0.8-0.3,1.2l-0.2,1.3c-0.2,1.7-0.5,3.4-0.5,4.9c-0.7,5.8-0.2,12,1.5,17.8s4.5,11.3,8.4,16.1 c3.8,4.8,8.6,8.8,14,11.8l4.2,2c1.4,0.6,2.9,1.1,4.3,1.6c1.5,0.4,3,0.8,4.5,1.2c1.5,0.3,3.2,0.5,4.7,0.8l0.6,0.1h0.5l1.1,0.1 l2.1,0.1h0.5h0.3h0.3h0.1h0.1l1.2-0.1l2.3-0.1l1.2-0.1c0.4,0,0.8-0.1,1.2-0.2l2.3-0.4c1.5-0.2,3-0.6,4.5-1 c6-1.6,11.6-4.5,16.5-8.2c4.9-3.8,9.1-8.4,12.2-13.7c0.4-0.7,0.8-1.3,1.2-2l1-2.1c0.3-0.7,0.7-1.4,1-2.1l0.8-2.2 c0.3-0.7,0.5-1.4,0.8-2.2l0.6-2.2l0.6-2.2l0.4-2.4c0.5-2.4-0.2-5.5-0.6-6.5C94.016,46.6,93.216,49.1,92.316,52.9z"></path> </g> </g> </g>
@@ -346,7 +308,7 @@
         </div>
 
 
-         <div class="text-white/50 border shadow-md -translate-y-1 -translate-x-6 bg-[#94bb41]   -rotate-3  rounded-[8px] ">
+         <div id="Select3" class="text-white/50 border shadow-md -translate-y-1 -translate-x-6 bg-[#94bb41]    -rotate-3  rounded-[8px] ">
             <svg  onclick="leftclick(3)" class="absolute top-0 left-0 p-1 fill-[#ffe5c2] hover:fill-[#ce4c07]"  height="32px" width="32px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 96.3 96.3" xml:space="preserve" transform="rotate(0)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
             </g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M48.416,50.3c6.6,2.2,13.3,1,20,1.4c0.3,0,0.8-0.7,0.9-1.1c0.3-1-0.1-1.8-0.6-2.4c-1.9-2-4.1-2.9-6.4-3.1 c-5.5-0.6-11.1-1.4-16.6-0.8c-0.7-0.1-1.4-0.2-2.1-0.2c-2.8-0.2-5.6-0.3-8.3-0.2c2.1-2,3.9-4,5.5-6.4c0.7-1,0.8-2.3-0.6-3.5 c-1.2-1.1-2.6-1.3-3.7-0.6c-1.8,1.3-3.6,2.6-5.2,4.2c-2.5,2.6-4.7,5.4-7.1,8.1l0,0l0,0c-1.1,0.5-1.5,1.8-1,2.9l0.5,1.1 c3,5.9,8.4,9.5,12.5,14.3c0.2,0.2,1,0.1,1.4-0.2c0.9-0.5,1.2-1.3,1.2-2.1c0.2-2.7-0.8-4.9-2.2-6.6c-1.2-1.4-2.3-2.9-3.4-4.3 c1.3,0.2,2.6,0.3,3.9,0.3C41.016,50.9,44.716,50.5,48.416,50.3z"></path> <path d="M92.316,52.9c-1.7,6.3-4.6,12.6-8.9,18.3c-0.5,0.7-1.1,1.4-1.7,2.1l-0.9,1l-0.4,0.5l-0.5,0.5c-0.6,0.6-1.3,1.3-1.9,1.9 l-0.5,0.5l-0.6,0.4l-1.1,0.9c-1.3,1.2-2.9,2.2-4.4,3.3c-0.7,0.5-1.6,0.9-2.4,1.4c-0.8,0.4-1.6,1-2.4,1.3c-3.9,2-8.2,3.2-12.6,3.9 c-1.1,0.1-2.2,0.4-3.3,0.4l-1.6,0.1h-0.8h-0.4h-0.2h-0.1l0,0l-3.4-0.2l-0.9-0.1c-0.3,0-0.5-0.1-0.8-0.1l-1.6-0.3l-1.6-0.3 c-0.5-0.1-1.1-0.3-1.6-0.4l-1.6-0.4c-0.5-0.1-1.1-0.3-1.6-0.5l-3-1.2c-1-0.5-2-1-2.9-1.4c-3.8-2.1-7.3-4.7-10.4-7.8 c-3-3.1-5.5-6.8-7.4-10.6l-0.7-1.5l-0.4-0.7l-0.3-0.8l-1.1-3.1l-0.8-3.1c-0.1-0.3-0.1-0.5-0.2-0.8l-0.1-0.8l-0.2-1.6l-0.3-1.6 l-0.1-1.6l-0.1-1.6v-0.8V48v-0.2v-0.4l0.2-3.5c0.1-1.1,0.3-2.1,0.4-3.1c0.7-4.2,2.1-8.4,4.1-12.3c2.2-3.7,4.9-7.1,8-10.1 c9.9-9.4,24.6-13.2,37.8-9.8l2.5,0.6l2.4,0.9l1.2,0.4c0.4,0.2,0.8,0.4,1.2,0.5l2.3,1.1c2.9,1.7,5.8,3.5,8.3,5.8 c1.3,1.1,2.4,2.4,3.6,3.6c0.6,0.6,1.1,1.3,1.6,2s1.1,1.3,1.5,2c0.9,1.4,1.9,2.8,2.6,4.4c0.4,0.8,0.8,1.5,1.2,2.3l0.9,2.4 c2.9,7.2,3.3,14,5.2,13.4c0.8-0.3,1.4-1.9,1.8-4.7c0-1.4,0-3-0.1-4.9c-0.2-0.9-0.3-1.9-0.5-2.9c-0.1-0.5-0.2-1-0.4-1.6 c-0.2-0.5-0.4-1.1-0.5-1.6c-1.2-3.9-3.2-7.6-5.4-11.1c-1.2-1.7-2.3-3.4-3.8-4.9l-1-1.2c-0.3-0.4-0.7-0.8-1.1-1.1l-2.3-2.1 c-3.2-2.7-6.6-5.1-10.4-6.9c-1.8-1-3.8-1.6-5.8-2.4c-1-0.4-2-0.5-3-0.8s-2-0.6-3.1-0.7l-2.6-0.4l-1.3-0.2l-0.9-0.4l-2.3-0.1h-0.6 h-0.3h-0.2h-0.2l0,0l0,0h-0.1l-1.2,0.1c-1.7,0.1-3.4,0.1-5,0.4c-1.7,0.3-3.3,0.5-4.9,1c-6.5,1.6-12.6,4.6-17.9,8.8 c-5.2,4.2-9.6,9.4-12.6,15.3l-1.1,2.2c-0.3,0.8-0.7,1.5-1,2.3l-0.7,2.4l-0.4,1.2c-0.1,0.4-0.2,0.8-0.3,1.2l-0.6,2.4 c-0.1,0.4-0.2,0.8-0.3,1.2l-0.2,1.3c-0.2,1.7-0.5,3.4-0.5,4.9c-0.7,5.8-0.2,12,1.5,17.8s4.5,11.3,8.4,16.1 c3.8,4.8,8.6,8.8,14,11.8l4.2,2c1.4,0.6,2.9,1.1,4.3,1.6c1.5,0.4,3,0.8,4.5,1.2c1.5,0.3,3.2,0.5,4.7,0.8l0.6,0.1h0.5l1.1,0.1 l2.1,0.1h0.5h0.3h0.3h0.1h0.1l1.2-0.1l2.3-0.1l1.2-0.1c0.4,0,0.8-0.1,1.2-0.2l2.3-0.4c1.5-0.2,3-0.6,4.5-1 c6-1.6,11.6-4.5,16.5-8.2c4.9-3.8,9.1-8.4,12.2-13.7c0.4-0.7,0.8-1.3,1.2-2l1-2.1c0.3-0.7,0.7-1.4,1-2.1l0.8-2.2 c0.3-0.7,0.5-1.4,0.8-2.2l0.6-2.2l0.6-2.2l0.4-2.4c0.5-2.4-0.2-5.5-0.6-6.5C94.016,46.6,93.216,49.1,92.316,52.9z"></path> </g> </g> </g>
         </svg>
@@ -354,15 +316,15 @@
                 <div class="border  bg-[#94bb41] shadow-md -rotate-19 translate-y-3 translate-x-6 rounded-[8px] ">
                     <div
                         class=" w-full flex items-center border rotate-11 md:scale-105  lg:scale-100  -translate-x-3  -translate-y-3   bg-[#94bb41]  shadow-xl  p-5 md:p-3 lg:p-5 rounded-[8px]">
-                        <div  class="container w-full overflow-hidden ">
-                        <a  href="photos.html#Select3"><div id="photoslider3" class="GalleryCollection flex h-64 md:h-80 md w-full   ">
+                        <div class="container w-full overflow-hidden ">
+                       <div onclick="ShowPhoto(3)" id="photoslider3" class="GalleryCollection flex h-64 md:h-80 md w-full   ">
                         <img class=" images3 rounded-[8px] flex-shrink-0  w-full object-cover border-2 text-black/50 " src="./photo3/img1.png" alt="">
                          <img class=" images3 rounded-[8px] flex-shrink-0 w-full object-cover border-2 text-black/50 " src="./photo3/img2.png" alt="">
                           <img class=" images3 rounded-[8px] flex-shrink-0 w-full object-cover border-2 text-black/50 " src="./photo3/img3.webp" alt="">
                            <img class=" images3 rounded-[8px] flex-shrink-0 w-full object-cover border-2 text-black/50 " src="./photo3/img4.png" alt="">
                             <img class=" images3 rounded-[8px] flex-shrink-0 w-full object-cover border-2 text-black/50 " src="./photo3/img5.png" alt="">
                              <img class=" images3 rounded-[8px] flex-shrink-0 w-full object-cover border-2 text-black/50 " src="./photo3/img6.png" alt="">
-                            </div></a></div>
+                            </div></div>
                     </div>
                    <svg   onclick="rightclick(3)" class=" absolute bottom-0 right-0 p-2 fill-[#ffe5c2] hover:fill-[#ce4c07]"  height="40px" width="40px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 96.3 96.3" xml:space="preserve" transform="rotate(180)">
                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M48.416,50.3c6.6,2.2,13.3,1,20,1.4c0.3,0,0.8-0.7,0.9-1.1c0.3-1-0.1-1.8-0.6-2.4c-1.9-2-4.1-2.9-6.4-3.1 c-5.5-0.6-11.1-1.4-16.6-0.8c-0.7-0.1-1.4-0.2-2.1-0.2c-2.8-0.2-5.6-0.3-8.3-0.2c2.1-2,3.9-4,5.5-6.4c0.7-1,0.8-2.3-0.6-3.5 c-1.2-1.1-2.6-1.3-3.7-0.6c-1.8,1.3-3.6,2.6-5.2,4.2c-2.5,2.6-4.7,5.4-7.1,8.1l0,0l0,0c-1.1,0.5-1.5,1.8-1,2.9l0.5,1.1 c3,5.9,8.4,9.5,12.5,14.3c0.2,0.2,1,0.1,1.4-0.2c0.9-0.5,1.2-1.3,1.2-2.1c0.2-2.7-0.8-4.9-2.2-6.6c-1.2-1.4-2.3-2.9-3.4-4.3 c1.3,0.2,2.6,0.3,3.9,0.3C41.016,50.9,44.716,50.5,48.416,50.3z"></path> <path d="M92.316,52.9c-1.7,6.3-4.6,12.6-8.9,18.3c-0.5,0.7-1.1,1.4-1.7,2.1l-0.9,1l-0.4,0.5l-0.5,0.5c-0.6,0.6-1.3,1.3-1.9,1.9 l-0.5,0.5l-0.6,0.4l-1.1,0.9c-1.3,1.2-2.9,2.2-4.4,3.3c-0.7,0.5-1.6,0.9-2.4,1.4c-0.8,0.4-1.6,1-2.4,1.3c-3.9,2-8.2,3.2-12.6,3.9 c-1.1,0.1-2.2,0.4-3.3,0.4l-1.6,0.1h-0.8h-0.4h-0.2h-0.1l0,0l-3.4-0.2l-0.9-0.1c-0.3,0-0.5-0.1-0.8-0.1l-1.6-0.3l-1.6-0.3 c-0.5-0.1-1.1-0.3-1.6-0.4l-1.6-0.4c-0.5-0.1-1.1-0.3-1.6-0.5l-3-1.2c-1-0.5-2-1-2.9-1.4c-3.8-2.1-7.3-4.7-10.4-7.8 c-3-3.1-5.5-6.8-7.4-10.6l-0.7-1.5l-0.4-0.7l-0.3-0.8l-1.1-3.1l-0.8-3.1c-0.1-0.3-0.1-0.5-0.2-0.8l-0.1-0.8l-0.2-1.6l-0.3-1.6 l-0.1-1.6l-0.1-1.6v-0.8V48v-0.2v-0.4l0.2-3.5c0.1-1.1,0.3-2.1,0.4-3.1c0.7-4.2,2.1-8.4,4.1-12.3c2.2-3.7,4.9-7.1,8-10.1 c9.9-9.4,24.6-13.2,37.8-9.8l2.5,0.6l2.4,0.9l1.2,0.4c0.4,0.2,0.8,0.4,1.2,0.5l2.3,1.1c2.9,1.7,5.8,3.5,8.3,5.8 c1.3,1.1,2.4,2.4,3.6,3.6c0.6,0.6,1.1,1.3,1.6,2s1.1,1.3,1.5,2c0.9,1.4,1.9,2.8,2.6,4.4c0.4,0.8,0.8,1.5,1.2,2.3l0.9,2.4 c2.9,7.2,3.3,14,5.2,13.4c0.8-0.3,1.4-1.9,1.8-4.7c0-1.4,0-3-0.1-4.9c-0.2-0.9-0.3-1.9-0.5-2.9c-0.1-0.5-0.2-1-0.4-1.6 c-0.2-0.5-0.4-1.1-0.5-1.6c-1.2-3.9-3.2-7.6-5.4-11.1c-1.2-1.7-2.3-3.4-3.8-4.9l-1-1.2c-0.3-0.4-0.7-0.8-1.1-1.1l-2.3-2.1 c-3.2-2.7-6.6-5.1-10.4-6.9c-1.8-1-3.8-1.6-5.8-2.4c-1-0.4-2-0.5-3-0.8s-2-0.6-3.1-0.7l-2.6-0.4l-1.3-0.2l-0.9-0.4l-2.3-0.1h-0.6 h-0.3h-0.2h-0.2l0,0l0,0h-0.1l-1.2,0.1c-1.7,0.1-3.4,0.1-5,0.4c-1.7,0.3-3.3,0.5-4.9,1c-6.5,1.6-12.6,4.6-17.9,8.8 c-5.2,4.2-9.6,9.4-12.6,15.3l-1.1,2.2c-0.3,0.8-0.7,1.5-1,2.3l-0.7,2.4l-0.4,1.2c-0.1,0.4-0.2,0.8-0.3,1.2l-0.6,2.4 c-0.1,0.4-0.2,0.8-0.3,1.2l-0.2,1.3c-0.2,1.7-0.5,3.4-0.5,4.9c-0.7,5.8-0.2,12,1.5,17.8s4.5,11.3,8.4,16.1 c3.8,4.8,8.6,8.8,14,11.8l4.2,2c1.4,0.6,2.9,1.1,4.3,1.6c1.5,0.4,3,0.8,4.5,1.2c1.5,0.3,3.2,0.5,4.7,0.8l0.6,0.1h0.5l1.1,0.1 l2.1,0.1h0.5h0.3h0.3h0.1h0.1l1.2-0.1l2.3-0.1l1.2-0.1c0.4,0,0.8-0.1,1.2-0.2l2.3-0.4c1.5-0.2,3-0.6,4.5-1 c6-1.6,11.6-4.5,16.5-8.2c4.9-3.8,9.1-8.4,12.2-13.7c0.4-0.7,0.8-1.3,1.2-2l1-2.1c0.3-0.7,0.7-1.4,1-2.1l0.8-2.2 c0.3-0.7,0.5-1.4,0.8-2.2l0.6-2.2l0.6-2.2l0.4-2.4c0.5-2.4-0.2-5.5-0.6-6.5C94.016,46.6,93.216,49.1,92.316,52.9z"></path> </g> </g> </g>
@@ -371,287 +333,79 @@
                 
             </div>
         </div>
-         
 </div>
-<a href="photos.html#SelectGallery"><h2 class="text-right text-2xl text-[#ce4c07] font-semibold  [text-shadow:0_0_6px_rgba(255,255,0,0.8)] pt-4">View All</h2></a>
+
+<div id="Gallery1" class="AllGallery relative px-3 sm:px-8 py-10 rounded-2xl w-full bg-[url('../Locationnbg.png')] bg-no-repeat bg-cover">
+    <h3 class="text-3xl font-semibold [text-shadow:0_0_4px_rgba(150,300,0,0.8)] pb-4 ">First Gallery</h3>
+<div class=" columns-2 md:columns-3 xl:columns-4 space-y-3 sm:space-y-5 gap-3 sm:gap-5   w-full "> 
+ <img class="  images  rounded-[8px] shrink w-full   object-cover border-2 text-black/50 " src="./photo1/img1.png" alt="">
+                         <img class=" images rounded-[8px]  w-full object-cover border-2 text-black/50 " src="./photo1/img2.png" alt="">
+                          <img class=" images rounded-[8px]  w-full object-cover border-2 text-black/50 " src="./photo1/img3.webp" alt="">
+                           <img class=" images rounded-[8px]  w-full object-cover border-2 text-black/50 " src="./photo1/img4.png" alt="">
+                            <img class=" images rounded-[8px]  w-full object-cover border-2 text-black/50 " src="./photo1/img5.png" alt="">
+                             <img class=" images rounded-[8px]  w-full object-cover border-2 text-black/50 " src="./photo1/img6.png" alt="">
+                              <img class="  images rounded-[8px] w-full   object-cover border-2 text-black/50 " src="./photo1/img1.png" alt="">
+                               <img class=" images rounded-[8px]  w-full object-cover border-2 text-black/50 " src="./photo1/img6.png" alt="">
+                              <img class="  images rounded-[8px] w-full   object-cover border-2 text-black/50 " src="./photo1/img1.png" alt="">
+                     
+</div>
+<div class="absolute right-0 left-0 bottom-0 flex justify-end items-center ">
+    <h4 onclick="ShowPhoto(2)" class=" font-[500] hover:transform duration-200 hover:font-[600] text-xl cursor-pointer">Next</h4>
+</div>
+</div>
+
+
+
+
+<div id="Gallery2" class="AllGallery relative hidden rounded-2xl px-3 sm:px-8 py-10 w-full bg-[url('../Locationnbg.png')] bg-no-repeat bg-cover">
+    <h3 class="text-3xl font-semibold  [text-shadow:0_0_4px_rgba(150,300,0,0.8)]  pb-4">Second Gallery</h3>
+<div class=" columns-2 md:columns-3 xl:columns-4  space-y-3 sm:space-y-5 gap-3 sm:gap-5  w-full object-cover"> 
+
+                          <img class=" images rounded-[8px] w-full    object-cover border-2 text-black/50 " src="./photo2/img1.png" alt="">
+                         <img class=" images rounded-[8px] w-full  object-cover border-2 text-black/50 " src="./photo2/img2.png" alt="">
+                          <img class=" images rounded-[8px] w-full   object-cover border-2 text-black/50 " src="./photo2/img3.webp" alt="">
+                           <img class=" images rounded-[8px] w-full  object-cover border-2 text-black/50 " src="./photo2/img4.png" alt="">
+                            <img class=" images rounded-[8px] w-full    object-cover border-2 text-black/50 " src="./photo2/img5.png" alt="">
+                             <img class=" images rounded-[8px] w-full  flex-shrink-0  object-cover border-2 text-black/50 " src="./photo2/img6.png" alt="">
+                     
+                             <div class="absolute right-0 left-0 bottom-0 flex justify-between items-center ">
+                                 <h4 onclick="ShowPhoto(1)" class=" font-[500] hover:transform duration-200 hover:font-[600] text-xl cursor-pointer">Previous</h4>
+                                 <h4 onclick="ShowPhoto(3)" class=" font-[500] hover:transform duration-200 hover:font-[600] text-xl cursor-pointer">Next</h4>
+</div>
+</div>
+
+</div>
+
+
+
+
+<div id="Gallery3"  class="AllGallery relative hidden rounded-2xl px-3 sm:px-8 py-10 w-full bg-[url('../Locationnbg.png')] bg-no-repeat bg-cover">
+    <h3 class="text-3xl font-semibold [text-shadow:0_0_4px_rgba(150,300,0,0.8)] pb-4">Third Gallery</h3>
+<div class=" columns-2 md:columns-3 xl:columns-4 space-y-3 sm:space-y-5 gap-3 sm:gap-5   w-full object-cover"> 
+   <img class=" images rounded-[8px]  w-full object-cover border-2 text-black/50 " src="./photo3/img1.png" alt="">
+                         <img class=" images rounded-[8px] w-full object-cover border-2 text-black/50 " src="./photo3/img2.png" alt="">
+                          <img class=" images rounded-[8px] w-full object-cover border-2 text-black/50 " src="./photo3/img3.webp" alt="">
+                           <img class=" images rounded-[8px] w-full object-cover border-2 text-black/50 " src="./photo3/img4.png" alt="">
+                            <img class=" images rounded-[8px] w-full object-cover border-2 text-black/50 " src="./photo3/img5.png" alt="">
+                             <img class=" images rounded-[8px] w-full object-cover border-2 text-black/50 " src="./photo3/img6.png" alt="">
+                     
+</div>
+  <div class="absolute right-0 left-0 bottom-0 flex  items-center ">
+                                 <h4 onclick="ShowPhoto(2)" class=" font-[500] hover:transform duration-200 hover:font-[600] text-xl cursor-pointer">Previous</h4>
+                                 
+</div>
+</div>
     </section>
 
-    <section class="blogs bg-[url('../images/locationnbg.png')] bg-no-repeat bg-cover   text-white">
-        <div class=" p-6   pb-20">
-            <div class="  backdrop-blur-xl rounded-2xl  shadow-2xl p-5 sm:p-12 md:p-5 lg:p-12">
-                <h2 class="text-4xl font-[600] fontbold text-shadow-xs text-[#ce4c07] ">Our Blogs</h2>
-                <div class="flex max-md:flex-col pt-10 gap-5">
-                    <div
-                        class="relative overflow-clip flex-1/2 md:max-w-1/2  lg:max-w-2/5 rounded-3xl group border-4  border-white/60   shadow-md ">
-                        <a href="blogs.html"><div
-                            class=" z-20 rounded-3xl hidden group-hover:block  absolute inset-0 bg-gradient-to-r from-[#000] to-[#fff0] ">
-                            <h3
-                                class="text-white opacity-0 text-center content-center transform translate-y-[30%]  h-full  text-xl group-hover:animate-Text font-bold">
-                                Description</h3>
-                        </div></a>
-                        <img class="h-64  w-full   z-10 object-cover shadow-xs rounded-xl group-hover:transform group-hover:scale-105 duration-500 flex-1/2 "
-                            src="./blogImg/blog1.png" alt="">
-                    </div>
-                    <div class="flex-1/2 text-[#223907]"><a href="blogs.html">
-
-                        <h4 class="text-xs text-[#52125d]">Lorem, ipsum.</h4>
-                        <h2 class="text-3xl font-[500] first-letter:text-[#5f2031] first-letter:text-4xl  ">Lorem, ipsum
-                            dolor Lorem ipsum dolor sit amet..</h2>
-                        <h3 class="text-xl">Lorem ipsum dolor sit amet.</h3>
-                    </a></div>
-                </div>
-                
-                <div class="my-8 flex max-md:flex-col gap-9 md:gap-4 lg:gap-9  ">
 
 
-                    <div
-                        class="flex-1/3 backdrop-blur-sm space-y-1 p-4 shadow-2xl rounded-3xl hover:transform border border-white/30  bg-black/30 hover:scale-103 duration-300 ease-in-out ">
-                        <div
-                            class="relative overflow-clip rounded-3xl group border border-white/50 h-52 mb-3  shadow-md ">
-                            <div
-                                class=" z-20 rounded-3xl hidden group-hover:block  absolute inset-0 bg-gradient-to-r from-[#000] to-[#fff0] ">
-                                <h3
-                                    class="text-white opacity-0 text-center content-center transform translate-y-[30%]  h-full  text-xl group-hover:animate-Text font-bold">
-                                    Description</h3>
-                            </div>
-                            <img class="h-52  w-full   z-10 object-cover shadow-xs rounded-xl group-hover:transform group-hover:scale-105 duration-500 flex-1/2 "
-                                src="./blogImg/blog2.webp" alt="">
-                        </div>
-                        <h4 class="text-[10px]  text-slate-500  uppercase tracking-wide">Lorem, ipsum.</h4>
-                        <h2 class="text-xl font-semibold  "><a href="blogs.html">Lorem, ipsum dolor Lorem ipsum dolor sit amet..</a></h2>
-                        <h3 class="text-[12px]">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur
-                            adipisicing elit.</h3>
-                    </div>
-
-
-                    <div
-                        class="flex-1/3 backdrop-blur-sm space-y-1 p-4 shadow-2xl rounded-3xl hover:transform border border-white/30  bg-black/30 hover:scale-103 duration-300 ease-in-out ">
-                        <div
-                            class="relative overflow-clip rounded-3xl group border border-white/50 h-52 mb-3  shadow-md ">
-                            <div
-                                class=" z-20 rounded-3xl hidden group-hover:block  absolute inset-0 bg-gradient-to-r from-[#000] to-[#fff0] ">
-                                <h3
-                                    class="text-white opacity-0 text-center content-center transform translate-y-[30%]  h-full  text-xl group-hover:animate-Text font-bold">
-                                    Description</h3>
-                            </div>
-                            <img class="h-52  w-full   z-10 object-cover shadow-xs rounded-xl group-hover:transform group-hover:scale-105 duration-500 flex-1/2 "
-                                src="./blogImg/blogg3.png" alt="">
-                        </div>
-                        <h4 class="text-[10px]  text-slate-500  uppercase tracking-wide">Lorem, ipsum.</h4>
-                        <h2 class="text-xl font-semibold  "><a href="blogs.html">Lorem, ipsum dolor Lorem ipsum dolor sit amet..</a></h2>
-                        <h3 class="text-[12px]">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur
-                            adipisicing elit.</h3>
-                    </div>
-
-                    <div
-                        class="flex-1/3 backdrop-blur-sm space-y-1 p-4 shadow-2xl rounded-3xl hover:transform border border-white/30  bg-black/30 hover:scale-103 duration-300 ease-in-out ">
-                        <div
-                            class="relative overflow-clip rounded-3xl group border border-white/50 h-52 mb-3  shadow-md ">
-                            <div
-                                class=" z-20 rounded-3xl hidden group-hover:block  absolute inset-0 bg-gradient-to-r from-[#000] to-[#fff0] ">
-                                <h3
-                                    class="text-white opacity-0 text-center content-center transform translate-y-[30%]  h-full  text-xl group-hover:animate-Text font-bold">
-                                    Description</h3>
-                            </div>
-                            <img class="h-52  w-full   z-10 object-cover shadow-xs rounded-xl group-hover:transform group-hover:scale-105 duration-500 flex-1/2 "
-                                src="./blogImg/blog4.png" alt="">
-                        </div>
-                        <h4 class="text-[10px]  text-slate-500  uppercase tracking-wide">Lorem, ipsum.</h4>
-                        <h2 class="text-xl font-semibold  "><a href="blogs.html">Lorem, ipsum dolor Lorem ipsum dolor sit amet..</a></h2>
-                        <h3 class="text-[12px]">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur
-                            adipisicing elit.</h3>
-                    </div>
-
-
-                </div>
-            </div>
-        </div>
-        
-
-
-
-    </section>
-
-     <section id="testimonial" class=" bg-[#94bb41] flex gap-5 flex-col justify-center max-sm:px-3 py-5 items-center ">
-        <h3 class="text-xl sm:text-2xl font-semibold text-[#ffee00] [text-shadow:0_0_5px_rgba(0,0,0,1)]"><span class="text-[#ff5900] [text-shadow:0_0_4px_rgba(150,300,0,0.8)]">──────</span> Testimonials <span
-                class="text-[#ce4c07] [text-shadow:0_0_4px_rgba(150,300,0,0.8)]">──────</span></h3>
-        <h3 class=" text-4xl font-bold text-[#ffee00] [text-shadow:0_0_5px_rgba(0,0,0,1)]"> What Our <span class="text-[#ff5900] [text-shadow:0_0_4px_rgba(150,300,0,0.8)]">Clients Says</span></h3>
-
-        <div class="flex max-md:flex-col pt-5 gap-10 md:gap-4 lg:gap-10 px-5 sm:px-14 md:px-8 lg:px-24 xl:px-28">
-            <div class=" space-y-4 p-5 rounded-2xl border-green-600 bg-[#9ac340] shadow-xl border-2  text-[#110600] flex-1/3">
-                <div class="flex gap-4 md:gap-1 lg:gap-4">
-                    <img class="rounded-full size-24 md:size-14 lg:size-20 aspect-square object-cover" src="blogImg/blogg3.png"
-                        alt="">
-                    <div>
-                        <p class="text-2xl font-semibold text-[#000]">Bishnu Bhandari</p>
-                        <p class="text-[18px]">President of CHEMSAN & Peace Medico</p>
-                    </div>
-                </div>
-                <p class="line-clamp-8">Dedicated and punctual toward work. Very humble tech support. Lorem ipsum dolor
-                    sit amet consectetur adipisicing elit. Repellendus consectetur facilis earum eum fugiat magnam
-                    reprehenderit quidem tempore dolorem, fugit voluptas. Rerum itaque modi eveniet quos voluptas nisi
-                    est harum.</p>
-
-                <div class="flex  w-full  justify-between md:text-[9px] lg:text-[12px] xl:text-[17px]">
-                    <div class="space-x-[2px] xl:space-x-1 text-[#FFEA00] "><i class="fa fa-star"></i><i
-                            class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
-                            class="fa fa-star"></i></div>
-
-                    <div class="flex items-center gap-[2px] ">
-                        <svg class="size-5" viewBox="-0.5 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000">
-                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                            <g id="SVGRepo_iconCarrier">
-                                <title>Google-color</title>
-                                <desc>Created with Sketch.</desc>
-                                <defs> </defs>
-                                <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                    <g id="Color-" transform="translate(-401.000000, -860.000000)">
-                                        <g id="Google" transform="translate(401.000000, 860.000000)">
-                                            <path
-                                                d="M9.82727273,24 C9.82727273,22.4757333 10.0804318,21.0144 10.5322727,19.6437333 L2.62345455,13.6042667 C1.08206818,16.7338667 0.213636364,20.2602667 0.213636364,24 C0.213636364,27.7365333 1.081,31.2608 2.62025,34.3882667 L10.5247955,28.3370667 C10.0772273,26.9728 9.82727273,25.5168 9.82727273,24"
-                                                id="Fill-1" fill="#FBBC05"> </path>
-                                            <path
-                                                d="M23.7136364,10.1333333 C27.025,10.1333333 30.0159091,11.3066667 32.3659091,13.2266667 L39.2022727,6.4 C35.0363636,2.77333333 29.6954545,0.533333333 23.7136364,0.533333333 C14.4268636,0.533333333 6.44540909,5.84426667 2.62345455,13.6042667 L10.5322727,19.6437333 C12.3545909,14.112 17.5491591,10.1333333 23.7136364,10.1333333"
-                                                id="Fill-2" fill="#EB4335"> </path>
-                                            <path
-                                                d="M23.7136364,37.8666667 C17.5491591,37.8666667 12.3545909,33.888 10.5322727,28.3562667 L2.62345455,34.3946667 C6.44540909,42.1557333 14.4268636,47.4666667 23.7136364,47.4666667 C29.4455,47.4666667 34.9177955,45.4314667 39.0249545,41.6181333 L31.5177727,35.8144 C29.3995682,37.1488 26.7323182,37.8666667 23.7136364,37.8666667"
-                                                id="Fill-3" fill="#34A853"> </path>
-                                            <path
-                                                d="M46.1454545,24 C46.1454545,22.6133333 45.9318182,21.12 45.6113636,19.7333333 L23.7136364,19.7333333 L23.7136364,28.8 L36.3181818,28.8 C35.6879545,31.8912 33.9724545,34.2677333 31.5177727,35.8144 L39.0249545,41.6181333 C43.3393409,37.6138667 46.1454545,31.6490667 46.1454545,24"
-                                                id="Fill-4" fill="#4285F4"> </path>
-                                        </g>
-                                    </g>
-                                </g>
-                            </g>
-                        </svg>
-                        <p class="text-black/90">(Google Review)</p>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class=" space-y-4 p-5   rounded-2xl border-green-600 bg-[#9ac340] shadow-xl border-2 text-[#110600] flex-1/3">
-                <div class="flex  gap-4 md:gap-1 lg:gap-4">
-                    <img class="rounded-full size-24 md:size-14 lg:size-20 aspect-square object-cover" src="blogImg/blogg3.png" alt="">
-                    <div>
-                        <p class="text-2xl font-semibold text-[#000]">Ram Pd.Tiwari</p>
-                        <p class="text-[18px]">CEO of Sayama Edu. Consultancy</p>
-                    </div>
-                </div>
-                <p class="line-clamp-8">Great team work and punctual toward work. i have ever seen in my life. Lorem
-                    ipsum dolor sit amet consectetur adipisicing elit. Repellendus consectetur facilis earum eum fugiat
-                    magnam reprehenderit quidem tempore dolorem, fugit voluptas. Rerum itaque modi eveniet quos voluptas
-                    nisi est harum.</p>
-
-                <div class="flex  w-full  justify-between md:text-[9px] lg:text-[12px] xl:text-[17px]">
-                    <div class="space-x-[2px] xl:space-x-1 text-[#FFEA00] "><i class="fa fa-star"></i><i
-                            class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
-                            class="fa fa-star"></i></div>
-
-                    <div class="flex items-center gap-[2px] ">
-                        <svg class="size-5" viewBox="-0.5 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000">
-                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                            <g id="SVGRepo_iconCarrier">
-                                <title>Google-color</title>
-                                <desc>Created with Sketch.</desc>
-                                <defs> </defs>
-                                <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                    <g id="Color-" transform="translate(-401.000000, -860.000000)">
-                                        <g id="Google" transform="translate(401.000000, 860.000000)">
-                                            <path
-                                                d="M9.82727273,24 C9.82727273,22.4757333 10.0804318,21.0144 10.5322727,19.6437333 L2.62345455,13.6042667 C1.08206818,16.7338667 0.213636364,20.2602667 0.213636364,24 C0.213636364,27.7365333 1.081,31.2608 2.62025,34.3882667 L10.5247955,28.3370667 C10.0772273,26.9728 9.82727273,25.5168 9.82727273,24"
-                                                id="Fill-1" fill="#FBBC05"> </path>
-                                            <path
-                                                d="M23.7136364,10.1333333 C27.025,10.1333333 30.0159091,11.3066667 32.3659091,13.2266667 L39.2022727,6.4 C35.0363636,2.77333333 29.6954545,0.533333333 23.7136364,0.533333333 C14.4268636,0.533333333 6.44540909,5.84426667 2.62345455,13.6042667 L10.5322727,19.6437333 C12.3545909,14.112 17.5491591,10.1333333 23.7136364,10.1333333"
-                                                id="Fill-2" fill="#EB4335"> </path>
-                                            <path
-                                                d="M23.7136364,37.8666667 C17.5491591,37.8666667 12.3545909,33.888 10.5322727,28.3562667 L2.62345455,34.3946667 C6.44540909,42.1557333 14.4268636,47.4666667 23.7136364,47.4666667 C29.4455,47.4666667 34.9177955,45.4314667 39.0249545,41.6181333 L31.5177727,35.8144 C29.3995682,37.1488 26.7323182,37.8666667 23.7136364,37.8666667"
-                                                id="Fill-3" fill="#34A853"> </path>
-                                            <path
-                                                d="M46.1454545,24 C46.1454545,22.6133333 45.9318182,21.12 45.6113636,19.7333333 L23.7136364,19.7333333 L23.7136364,28.8 L36.3181818,28.8 C35.6879545,31.8912 33.9724545,34.2677333 31.5177727,35.8144 L39.0249545,41.6181333 C43.3393409,37.6138667 46.1454545,31.6490667 46.1454545,24"
-                                                id="Fill-4" fill="#4285F4"> </path>
-                                        </g>
-                                    </g>
-                                </g>
-                            </g>
-                        </svg>
-                        <p class="text-black/90">(Google Review)</p>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="space-y-4 p-5   rounded-2xl border-green-600 bg-[#9ac340] shadow-xl border-2 text-[#110600] flex-1/3">
-                <div class="flex gap-4 md:gap-1 lg:gap-4">
-                    <img class="rounded-full size-24 md:size-14 lg:size-20 aspect-square object-cover" src="blogImg/blogg3.png"
-                        alt="">
-                    <div>
-                        <p class="text-2xl font-semibold text-[#000]">Sundar Pandey</p>
-                        <p class="text-[18px]">CEO of Dos Multi Service</p>
-                    </div>
-                </div>
-                <p class="line-clamp-8">You have done my work in easy way.I want to give five star for Nitlegend and
-                    team. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus consectetur facilis earum
-                    eum fugiat magnam reprehenderit quidem tempore dolorem, fugit voluptas. Rerum itaque modi eveniet
-                    quos voluptas nisi est harum.</p>
-
-                <div class="flex  w-full  justify-between md:text-[9px] lg:text-[12px] xl:text-[17px]">
-                    <div class="space-x-[2px] xl:space-x-1 text-[#FFEA00] "><i class="fa fa-star"></i><i
-                            class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
-                            class="fa fa-star"></i></div>
-
-                    <div class="flex items-center gap-[2px] ">
-                        <svg class="size-5" viewBox="-0.5 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000">
-                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                            <g id="SVGRepo_iconCarrier">
-                                <title>Google-color</title>
-                                <desc>Created with Sketch.</desc>
-                                <defs> </defs>
-                                <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                    <g id="Color-" transform="translate(-401.000000, -860.000000)">
-                                        <g id="Google" transform="translate(401.000000, 860.000000)">
-                                            <path
-                                                d="M9.82727273,24 C9.82727273,22.4757333 10.0804318,21.0144 10.5322727,19.6437333 L2.62345455,13.6042667 C1.08206818,16.7338667 0.213636364,20.2602667 0.213636364,24 C0.213636364,27.7365333 1.081,31.2608 2.62025,34.3882667 L10.5247955,28.3370667 C10.0772273,26.9728 9.82727273,25.5168 9.82727273,24"
-                                                id="Fill-1" fill="#FBBC05"> </path>
-                                            <path
-                                                d="M23.7136364,10.1333333 C27.025,10.1333333 30.0159091,11.3066667 32.3659091,13.2266667 L39.2022727,6.4 C35.0363636,2.77333333 29.6954545,0.533333333 23.7136364,0.533333333 C14.4268636,0.533333333 6.44540909,5.84426667 2.62345455,13.6042667 L10.5322727,19.6437333 C12.3545909,14.112 17.5491591,10.1333333 23.7136364,10.1333333"
-                                                id="Fill-2" fill="#EB4335"> </path>
-                                            <path
-                                                d="M23.7136364,37.8666667 C17.5491591,37.8666667 12.3545909,33.888 10.5322727,28.3562667 L2.62345455,34.3946667 C6.44540909,42.1557333 14.4268636,47.4666667 23.7136364,47.4666667 C29.4455,47.4666667 34.9177955,45.4314667 39.0249545,41.6181333 L31.5177727,35.8144 C29.3995682,37.1488 26.7323182,37.8666667 23.7136364,37.8666667"
-                                                id="Fill-3" fill="#34A853"> </path>
-                                            <path
-                                                d="M46.1454545,24 C46.1454545,22.6133333 45.9318182,21.12 45.6113636,19.7333333 L23.7136364,19.7333333 L23.7136364,28.8 L36.3181818,28.8 C35.6879545,31.8912 33.9724545,34.2677333 31.5177727,35.8144 L39.0249545,41.6181333 C43.3393409,37.6138667 46.1454545,31.6490667 46.1454545,24"
-                                                id="Fill-4" fill="#4285F4"> </path>
-                                        </g>
-                                    </g>
-                                </g>
-                            </g>
-                        </svg>
-                        <p class="text-black/90">(Google Review)</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-<h2 onclick="window.location='./testimonial.html'" class="text-right px-10 sm:px-24 md:px-14 w-full cursor-pointer text-2xl text-[#ce4c07] font-semibold [text-shadow:0_0_6px_rgba(255,255,0,0.8)]">View All</h2>
-  
-
-    </section>
-
-    <!-- <iframe src="https://scratch.mit.edu/projects/1219829158/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe> -->
 
     <section class="footer ">
         <img class="rotate-180 w-full object-cover" src="./images/wave.png" alt="">
         <div id="footer1"
             class="flex flex-col  text-center px-5 max-md:gap-10 md:grid md:grid-flow-row md:grid-cols-5 text-[18px]">
             <div class="flex justify-center items-center row-span-2 ">
-                <a href="#Top"><img src="./images/Logo.png"></a>
+                <a href="index.html"><img src="./images/Logo.png"></a>
             </div>
             <div>
                 <h3 >About Us</h3>
@@ -740,7 +494,7 @@
 
 
 
-    <script   src="./script.js"></script>
+    <script src="./script.js"></script>
 
 
 </body>

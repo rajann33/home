@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en" class="!scroll-smooth">
+
+<head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&family=Poppins:wght@600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./src/output.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs</title>
+
+
+</head>
+
+<body class=" font-Montserrat max-w-[100%] relative text-[#3e3010] bg-[url('../images/locationnbg.png')] bg-no-repeat bg-cover ">
+ <a href="#Top"><div id="UpButton" class="hidden z-30 fixed bottom-0 right-0 text-3xl text-[#000] p-2"><img class="size-14 hover:transform hover:scale-105 duration-300" src="./images/Upp.png"  ></div></a>
+      <section
+        class=" slidingNAV no-scrollbar select-none hidden h-screen overflow-y-scroll bg-gradient-to-b from-[#fff] w-full via-[#bac30d39] via-30% to-[#95e72339] to-[150%] backdrop-blur-[15px]  sm:w-[300px] md:w-[440px] float-end  fixed right-0 contain-cover min-h-[100%] shadow-2xl top-0 z-50 [box-shadow:-10px_0_20px_-5px_rgba(156,104,31,0.6)]">
+    
+            <nav class="w-full">
+                <div class="  peer-checked:hidden flex justify-between w-full  px-6 pt-6 sm:px-8 sm:pt-8 ">
+                    <a class="w-[70%] " href="index.html"><img src="./images/Logo.png" ></a>
+                    <div class="flex items-center text-5xl" onclick=hidemenu()>&times;</div>
+                </div>
+                <div class="flex flex-col justify-center items-center object-contain inset-0 my-8">
+                    <div
+                        class=" text-center text-[#ae232b] font-[var(--font-custom)] text-4xl    [text-shadow:0_0_4px_rgba(255,255,0,0.8)] ">
+                        <a href="index.html"><li onclick=hidemenu() class="  py-5 px-3 w-full text-3xl ">Home</li></a>
+                        <a href="aboutus.html"><li onclick="hidemenu()" class="border-t  border-black py-5 px-3 w-full text-3xl">About Us</li></a>
+                        <div class="peer">
+                            <input type="radio" name="options" id="menu-toggle1" class="peer hidden" />
+                            <label for="menu-toggle1"
+                                class="block w-full border-t border-black py-5  px-3 text-3xl peer-checked:pb-0 peer-checked:text-left ">Our Products</label>
+                            <div class=" hidden peer-checked:block  pb-6 ml-3 text-left">
+                               <a href="./product.html#p1"> <li onclick=hidemenu() class="  py-1 px-3 w-full">Black Tea
+                                </li></a>
+                               <a href="./product.html#p2"> <li onclick=hidemenu() class="  py-1 px-3 w-full">Green Tea
+                                </li></a>
+                               <a href="./product.html#p3"> <li onclick=hidemenu() class="  py-1 px-3 w-full">Herbal Tea
+                                </li></a>
+                               <a href="./product.html#p4"> <li onclick=hidemenu() class="  py-1 px-3 w-full">Milk Tea
+                                </li></a>
+                               <a href="./product.html#p5"> <li onclick=hidemenu() class="  py-1 px-3 w-full">Oolong Tea
+                                </li></a>
+                                <a href="./product.html#new"><li onclick=hidemenu() class="  py-1 px-3 w-full">New
+                                        Release</li></a>
+                                </div>
+                        </div>
+ <a href="photos.html"><li onclick="hidemenu()" class="border-t border-b  border-black py-5 px-3 w-full text-3xl">
+                           Our Gallery</li></a>
+                    
+                        <a href="#contactUs"><li onclick="hidemenu()" class="border-b  border-black py-5 px-3 w-full text-3xl">
+                            Contact Us</li></a>
+                    </div>
+                </div>
+            </nav>
+    </section>
+
+    <div id="topnav"
+        class="topnav z-10 bg-[#00982e] max-md:hidden text-shadow-2xs text-[#ffb600] h-7 font-semibold flex  justify-between px-16 lg:px-28  text-[15px] items-center py-3 object-contain   ">
+        <div class=" flex items-center gap-5 lg:gap-10   ">
+            <h3 class="flex items-center">
+                <svg class="px-3" width="45px" height="45px" version="1.0" id="Layer_1"
+                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64"
+                    enable-background="new 0 0 64 64" xml:space="preserve" fill="#000000">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <path fill="#38ffb3"
+                            d="M32,0C18.746,0,8,10.746,8,24c0,5.219,1.711,10.008,4.555,13.93c0.051,0.094,0.059,0.199,0.117,0.289l16,24 C29.414,63.332,30.664,64,32,64s2.586-0.668,3.328-1.781l16-24c0.059-0.09,0.066-0.195,0.117-0.289C54.289,34.008,56,29.219,56,24 C56,10.746,45.254,0,32,0z M32,32c-4.418,0-8-3.582-8-8s3.582-8,8-8s8,3.582,8,8S36.418,32,32,32z">
+                        </path>
+                    </g>
+                </svg>
+                <a href="aboutus.html#location">Find a location</a>
+            </h3>
+            <h3 class="text-[#ffb600]">|</h3>
+            <h3 class="flex items-center">
+
+                <svg class="p-3" width="45px" height="45px" viewBox="0 -2.5 20 20" version="1.1"
+                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <title>email [#1572]</title>
+                        <desc>Created with Sketch.</desc>
+                        <defs> </defs>
+                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="Dribbble-Light-Preview" transform="translate(-340.000000, -922.000000)"
+                                fill="#38ffb3">
+                                <g id="icons" transform="translate(56.000000, 160.000000)">
+                                    <path
+                                        d="M294,774.474 L284,765.649 L284,777 L304,777 L304,765.649 L294,774.474 Z M294.001,771.812 L284,762.981 L284,762 L304,762 L304,762.981 L294.001,771.812 Z"
+                                        id="email-[#1572]"> </path>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+                info@chiyabagan.com
+            </h3>
+        </div>
+        <div class="flex gap-5 items-center">
+            <svg class="size-20" viewBox="-5 0 24 20" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" fill="#38ffb3">
+                <a href="https://www.facebook.com/p/CHIYA-BAGAN-61555735625987/">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                    <g id="Page-1" stroke="none" stroke-width="1" fill="#38ffb3" fill-rule="evenodd">
+                        <g id="Dribbble-Light-Preview" transform="translate(-385.000000, -7399.000000)" fill="#38ffb3">
+                            <g id="icons" transform="translate(56.000000, 160.000000)">
+                                <path
+                                    d="M335.821282,7259 L335.821282,7250 L338.553693,7250 L339,7246 L335.821282,7246 L335.821282,7244.052 C335.821282,7243.022 335.847593,7242 337.286884,7242 L338.744689,7242 L338.744689,7239.14 C338.744689,7239.097 337.492497,7239 336.225687,7239 C333.580004,7239 331.923407,7240.657 331.923407,7243.7 L331.923407,7246 L329,7246 L329,7250 L331.923407,7250 L331.923407,7259 L335.821282,7259 Z"
+                                    id="facebook-[#176]"> </path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </a></svg>
+
+            <svg viewBox="0 -0.5 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <a href="https://www.instagram.com/https%3A%2F%2Fwww.instagram.com%2Fchiya_bagan%3Figsh%3DMWM2MjdyOHFyMXhn%26utm_source%3Dqr?fbclid=IwY2xjawLlWdlleHRuA2FlbQIxMQBicmlkETF1WTFtV3JzOEJNUDY1SUQ2AR7Nu5EiQbCht0NWC8W8VjRh7sN16TpccDfiI0LSwomzE9VDKqDrZbMTFvviJQ_aem_91H-OjMD-e_u1znyXOAp-Q">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M15.5 5H9.5C7.29086 5 5.5 6.79086 5.5 9V15C5.5 17.2091 7.29086 19 9.5 19H15.5C17.7091 19 19.5 17.2091 19.5 15V9C19.5 6.79086 17.7091 5 15.5 5Z"
+                        stroke="#38ffb3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M12.5 15C10.8431 15 9.5 13.6569 9.5 12C9.5 10.3431 10.8431 9 12.5 9C14.1569 9 15.5 10.3431 15.5 12C15.5 12.7956 15.1839 13.5587 14.6213 14.1213C14.0587 14.6839 13.2956 15 12.5 15Z"
+                        stroke="#38ffb3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <rect x="15.5" y="9" width="2" height="2" rx="1" transform="rotate(-90 15.5 9)" fill="#000000">
+                    </rect>
+                    <rect x="16" y="8.5" width="1" height="1" rx="0.5" transform="rotate(-90 16 8.5)" stroke="#38ffb3"
+                        stroke-linecap="round"></rect>
+                </g></a>
+            </svg>
+
+            <svg fill="#38ffb3" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 512" xml:space="preserve">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                    <g>
+                        <g>
+                            <path
+                                d="M17.95,528.854h71.861c9.914,0,17.95-8.037,17.95-17.951V196.8c0-9.915-8.036-17.95-17.95-17.95H17.95 C8.035,178.85,0,186.885,0,196.8v314.103C0,520.816,8.035,528.854,17.95,528.854z">
+                            </path>
+                            <path
+                                d="M17.95,123.629h71.861c9.914,0,17.95-8.036,17.95-17.95V41.866c0-9.914-8.036-17.95-17.95-17.95H17.95 C8.035,23.916,0,31.952,0,41.866v63.813C0,115.593,8.035,123.629,17.95,123.629z">
+                            </path>
+                            <path
+                                d="M525.732,215.282c-10.098-13.292-24.988-24.223-44.676-32.791c-19.688-8.562-41.42-12.846-65.197-12.846 c-48.268,0-89.168,18.421-122.699,55.27c-6.672,7.332-11.523,5.729-11.523-4.186V196.8c0-9.915-8.037-17.95-17.951-17.95h-64.192 c-9.915,0-17.95,8.035-17.95,17.95v314.103c0,9.914,8.036,17.951,17.95,17.951h71.861c9.915,0,17.95-8.037,17.95-17.951V401.666 c0-45.508,2.748-76.701,8.244-93.574c5.494-16.873,15.66-30.422,30.488-40.649c14.83-10.227,31.574-15.343,50.24-15.343 c14.572,0,27.037,3.58,37.393,10.741c10.355,7.16,17.834,17.19,22.436,30.104c4.604,12.912,6.904,41.354,6.904,85.33v132.627 c0,9.914,8.035,17.951,17.949,17.951h71.861c9.914,0,17.949-8.037,17.949-17.951V333.02c0-31.445-1.982-55.607-5.941-72.48 S535.836,228.581,525.732,215.282z">
+                            </path>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+            <h3 class=" text-[#ffb600]">|</h3>
+        </div>
+
+    </div>
+
+    <section id="LandingAndNav Top"
+        class=" navigation  flex flex-col justify-center items-center h-32 overflow-hidden relative ">
+
+
+        <nav id="navbar"
+            class=" bg-[linear-gradient(180deg,_rgba(0,0,0,0.7)_0%,_rgba(237,221,83,0)_100%)] animate-slideIn  md:opacity-90 absolute  z-40 top-0 flex justify-between items-center  w-[100vw]  max-sm:px-6 mx-1 px-16 fill-[#c2eb68] text-[#c2eb68]  object-contain">
+            <li class=" hover:opacity-100">
+                <a href="index.html"><img id="logoid" src="./images/Logo.png" alt="" class="my-2 w-56 lg:w-72 hover:opacity-100 object-contain "></a>
+            </li>
+            <div class="flex gap-4">
+                <div class="flex gap-3">
+                    <li>
+                        <a href="https://www.facebook.com/p/CHIYA-BAGAN-61555735625987/"><svg class="h-8 hover:fill-[#66ffd6] max-md:hidden"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path
+                                    d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z">
+                                </path>
+                            </svg></a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/https%3A%2F%2Fwww.instagram.com%2Fchiya_bagan%3Figsh%3DMWM2MjdyOHFyMXhn%26utm_source%3Dqr?fbclid=IwY2xjawLlWdlleHRuA2FlbQIxMQBicmlkETF1WTFtV3JzOEJNUDY1SUQ2AR7Nu5EiQbCht0NWC8W8VjRh7sN16TpccDfiI0LSwomzE9VDKqDrZbMTFvviJQ_aem_91H-OjMD-e_u1znyXOAp-Q"><svg class="h-8 max-md:hidden hover:fill-[#66ffd6]"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path
+                                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
+                                </path>
+                            </svg></a>
+                    </li>
+                </div>
+                <a>
+                    <div onclick=showmenu() class="select-none flex gap-1 group">
+
+                        <li class="">
+                            <svg class="size-8  group-hover:fill-[#66ffd6] " xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M3 13h18c0.552 0 1-0.448 1-1s-0.448-1-1-1h-18c-0.552 0-1 0.448-1 1s0.448 1 1 1zM3 7h18c0.552 0 1-0.448 1-1s-0.448-1-1-1h-18c-0.552 0-1 0.448-1 1s0.448 1 1 1zM3 19h18c0.552 0 1-0.448 1-1s-0.448-1-1-1h-18c-0.552 0-1 0.448-1 1s0.448 1 1 1z">
+
+                                </path>
+                            </svg>
+                        </li>
+                        <li class="text-2xl group-hover:text-[#66ffd6] text-[#c2eb68]">Menu</li>
+
+                    </div>
+                </a>
+            </div>
+
+        </nav>
+
+       
+        <!-- <img src="./wave.png" alt="" class="animate-slideUp absolute bottom-0 "> -->
+    </section>
+
+
+
+
+
+     <section class="blogs  text-white">
+        <div class=" p-6   pb-20">
+            <div class="  backdrop-blur-xl rounded-2xl  shadow-2xl p-5 sm:p-12 md:p-5 lg:p-12">
+                <h2 class="text-4xl font-[600] fontbold text-shadow-xs text-[#ce4c07] ">Our Blogs</h2>
+
+
+                <a href="blogsDetail.html"><div class="flex max-md:flex-col pt-10 gap-5">
+                    <div
+                        class="relative overflow-clip flex-1/2 md:max-w-1/2 h-64 lg:max-w-2/5 rounded-3xl group border-4  border-white/60   shadow-md ">
+                        <div
+                            class=" z-20 rounded-3xl hidden group-hover:block  absolute inset-0 bg-gradient-to-r from-[#000] to-[#fff0] ">
+                            <h3
+                                class="text-white opacity-0 text-center content-center transform translate-y-[30%]  h-full  text-xl group-hover:animate-Text font-bold">
+                                Description</h3>
+                        </div>
+                        <img class="h-64  w-full   z-10 object-cover shadow-xs rounded-xl group-hover:transform group-hover:scale-105 duration-500 flex-1/2 "
+                            src="./blogImg/blog1.png" alt="">
+                    </div>
+                    <div class="flex-1/2 text-[#223907]">
+
+                        <h4 class="text-xs text-[#52125d]">Lorem, ipsum.</h4>
+                        <h2 class="text-3xl font-[500] first-letter:text-[#5f2031] first-letter:text-4xl  ">Lorem, ipsum
+                            dolor Lorem ipsum dolor sit amet..</h2>
+                        <h3 class="text-xl">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, ullam modi a autem maxime accusantium.. Lorem ipsum dolor sit amet consectetu</h3>
+                    </div>
+                </div></a>
+
+                 <a href="blogsDetail.html"><div class="flex flex-row-reverse md:text-right max-md:flex-col pt-10 gap-5">
+                    <div
+                        class="relative overflow-clip flex-1/2 md:max-w-1/2 h-64 lg:max-w-2/5 rounded-3xl group border-4  border-white/60   shadow-md ">
+                        <div
+                            class=" z-20 rounded-3xl hidden group-hover:block  absolute inset-0 bg-gradient-to-r from-[#000] to-[#fff0] ">
+                            <h3
+                                class="text-white opacity-0 text-center content-center transform translate-y-[30%]  h-full  text-xl group-hover:animate-Text font-bold">
+                                Description</h3>
+                        </div>
+                        <img class="h-64  w-full   z-10 object-cover shadow-xs rounded-xl group-hover:transform group-hover:scale-105 duration-500 flex-1/2 "
+                            src="./blogImg/blog2.webp" alt="">
+                    </div>
+                    <div class="flex-1/2 text-[#223907]">
+
+                        <h4 class="text-xs text-[#52125d]">Lorem, ipsum.</h4>
+                        <h2 class="text-3xl font-[500] first-letter:text-[#5f2031] first-letter:text-4xl  ">Lorem, ipsum
+                            dolor Lorem ipsum dolor sit amet.. </h2>
+                        <h3 class="text-xl">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus pariatur ab doloribus rem eligendi delectus expedita reprehenderit ullam saepe sit.</h3>
+                    </div>
+                </div></a>
+
+                <a href="blogsDetail.html"> <div class="flex max-md:flex-col pt-10 gap-5">
+                    <div
+                        class="relative h-64 overflow-clip flex-1/2 md:max-w-1/2  lg:max-w-2/5 rounded-3xl group border-4  border-white/60   shadow-md ">
+                        <div
+                            class=" z-20 rounded-3xl hidden group-hover:block  absolute inset-0 bg-gradient-to-r from-[#000] to-[#fff0] ">
+                            <h3
+                                class="text-white opacity-0 text-center content-center transform translate-y-[30%]  h-full  text-xl group-hover:animate-Text font-bold">
+                                Description</h3>
+                        </div>
+                        <img class="h-64  w-full   z-10 object-cover shadow-xs rounded-xl group-hover:transform group-hover:scale-105 duration-500 flex-1/2 "
+                            src="./blogImg/blogg3.png" alt="">
+                    </div>
+                    <div class="flex-1/2 text-[#223907]">
+
+                        <h4 class="text-xs text-[#52125d]">Lorem, ipsum.</h4>
+                        <h2 class="text-3xl font-[500] first-letter:text-[#5f2031] first-letter:text-4xl  ">Lorem, ipsum
+                            dolor Lorem ipsum dolor sit amet..</h2>
+                        <h3 class="text-xl">Lorem ipsum dolor sit amet. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati voluptates hic ad beatae voluptatibus repellat quos ut consequatur maxime quasi.</h3>
+                    </div>
+                </div></a>
+
+                <a href="blogsDetail.html"> <div class="flex flex-row-reverse md:text-right max-md:flex-col pt-10 gap-5">
+                    <div
+                        class="relative overflow-clip flex-1/2 md:max-w-1/2 h-64 lg:max-w-2/5 rounded-3xl group border-4  border-white/60   shadow-md ">
+                        <div
+                            class=" z-20 rounded-3xl hidden group-hover:block  absolute inset-0 bg-gradient-to-r from-[#000] to-[#fff0] ">
+                            <h3
+                                class="text-white opacity-0 text-center content-center transform translate-y-[30%]  h-full  text-xl group-hover:animate-Text font-bold">
+                                Description</h3>
+                        </div>
+                        <img class="h-64  w-full   z-10 object-cover shadow-xs rounded-xl group-hover:transform group-hover:scale-105 duration-500 flex-1/2 "
+                            src="./blogImg/blog3.png" alt="">
+                    </div>
+                    <div class="flex-1/2 text-[#223907]">
+
+                        <h4 class="text-xs text-[#52125d]">Lorem, ipsum.</h4>
+                        <h2 class="text-3xl font-[500] first-letter:text-[#5f2031] first-letter:text-4xl  ">Lorem, ipsum
+                            dolor Lorem ipsum dolor sit amet..</h2>
+                        <h3 class="text-xl">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium quidem porro commodi! Quidem non ipsa saepe quasi ex, qui voluptas!</h3>
+                    </div>
+                </div></a>
+
+                <a href="blogsDetail.html"> <div class="flex max-md:flex-col pt-10 gap-5">
+                    <div
+                        class="relative overflow-clip flex-1/2 md:max-w-1/2 h-64 lg:max-w-2/5 rounded-3xl group border-4  border-white/60   shadow-md ">
+                        <div
+                            class=" z-20 rounded-3xl hidden group-hover:block  absolute inset-0 bg-gradient-to-r from-[#000] to-[#fff0] ">
+                            <h3
+                                class="text-white opacity-0 text-center content-center transform translate-y-[30%]  h-full  text-xl group-hover:animate-Text font-bold">
+                                Description</h3>
+                        </div>
+                        <img class="h-64  w-full   z-10 object-cover shadow-xs rounded-xl group-hover:transform group-hover:scale-105 duration-500 flex-1/2 "
+                            src="./blogImg/blog4.png" alt="">
+                    </div>
+                    <div class="flex-1/2 text-[#223907]">
+
+                        <h4 class="text-xs text-[#52125d]">Lorem, ipsum.</h4>
+                        <h2 class="text-3xl font-[500] first-letter:text-[#5f2031] first-letter:text-4xl  ">Lorem, ipsum
+                            dolor Lorem ipsum dolor sit amet..</h2>
+                        <h3 class="text-xl">Lorem ipsum dolor sit amet. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus perspiciatis sint reiciendis vel fugiat libero omnis cumque quo fugit rerum.</h3>
+                    </div>
+                </div></a>
+                
+            </div>
+        </div>
+        
+
+
+
+    </section>
+
+
+  
+
+   <section class="footer bg-white ">
+        <img class="rotate-180 w-full object-cover" src="./images/wave.png" alt="">
+        <div id="footer1"
+            class="flex flex-col  text-center px-5 max-md:gap-10 md:grid md:grid-flow-row md:grid-cols-5 text-[18px]">
+            <div class="flex justify-center items-center row-span-2 ">
+                <a href="index.html"><img src="./images/Logo.png"></a>
+            </div>
+            <div>
+                <h3 >About Us</h3>
+                <a href="aboutus.html#ourstory"><li class="md:hidden">Our Story</li></a>
+                <a href="aboutus.html#getintouch"><li class="md:hidden">Get In Touch</li></a>
+            </div>
+            <div>
+                <h3 >Our Products</h3>
+                <div class="md:hidden">
+                               <a href="./product.html#p1"> <li>Black Tea
+                                </li></a>
+                               <a href="./product.html#p2"> <li >Green Tea
+                                </li></a>
+                               <a href="./product.html#p3"> <li>Herbal Tea
+                                </li></a>
+                               <a href="./product.html#p4"> <li>Milk Tea
+                                </li></a>
+                               <a href="./product.html#p5"> <li>Oolong Tea
+                                </li></a>
+                                <a href="./product.html#new"><li>New
+                                        Release</li></a>
+                                </div>
+            </div>
+            <div>
+                <h3 >Our Collections</h3>
+                <div class="md:hidden">
+                    <a href="blogs.html"><li>Our Complete Blogs</li></a>
+                    <a href="photos.html#SelectGallery"><li>Our Photo Collections</li></a>
+            </div>
+            </div>
+            <div id="contactUs">
+                <h3>Contact Us</h3>
+                   <div class="md:hidden text-[17px]">
+                 <span itemprop="telephone"><a href="tel:+9779807440817"><li>980-7440817</li></a></span>
+                  <li>Bhagwati Tole, Butwal</li>
+                 <li>info@chiyabagan.com</li>
+                <div class="flex justify-center gap-4 md:gap-0  object-fill p-3 ">
+                    <a href="https://www.facebook.com/p/CHIYA-BAGAN-61555735625987/"><img   class="size-12 hover:transform hover:scale-105 duration-300" src="./images/facebook.png"   alt=""></a>
+                   <a href="https://www.instagram.com/https%3A%2F%2Fwww.instagram.com%2Fchiya_bagan%3Figsh%3DMWM2MjdyOHFyMXhn%26utm_source%3Dqr?fbclid=IwY2xjawLlWdlleHRuA2FlbQIxMQBicmlkETF1WTFtV3JzOEJNUDY1SUQ2AR7Nu5EiQbCht0NWC8W8VjRh7sN16TpccDfiI0LSwomzE9VDKqDrZbMTFvviJQ_aem_91H-OjMD-e_u1znyXOAp-Q"> <img  class="size-12 hover:transform hover:scale-105 duration-300" src="./images/instagram.png"  alt=""></a>
+                    <a href="https://www.tiktok.com/discover/chiya-bagan-butwal-shivnagar"><img  class="size-12 hover:transform hover:scale-105 duration-300" src="./images/tiktok.png"  alt=""></a>
+                    <a href="#"><img  class="size-12 hover:transform hover:scale-105 duration-300" src="./images/mail.png"  alt=""></a>
+                    
+                </div>
+            </div>
+            </div>
+            <div>
+           <a href="aboutus.html#ourstory"><li class="max-md:hidden">Our Story</li></a>
+                <a href="aboutus.html#getintouch"><li class="max-md:hidden">Get In Touch</li></a></div>
+            <div class="max-md:hidden">
+                               <a href="./product.html#p1"> <li>Black Tea
+                                </li></a>
+                               <a href="./product.html#p2"> <li >Green Tea
+                                </li></a>
+                               <a href="./product.html#p3"> <li>Herbal Tea
+                                </li></a>
+                               <a href="./product.html#p4"> <li>Milk Tea
+                                </li></a>
+                               <a href="./product.html#p5"> <li>Oolong Tea
+                                </li></a>
+                                <a href="./product.html#new"><li class="text-[19px]">New
+                                        Release</li></a>
+                                </div>
+           <div class="max-md:hidden">
+                    <a href="blogs.html"><li>Our Complete <span class="text-[19px]">Blogs</span></li></a>
+                    <a href="photos.html#SelectGallery"><li >Our <span class="text-[19px]">Photo</span> Collections</li></a>
+            </div>
+            <div class="max-md:hidden text-[17px]">
+                 <span itemprop="telephone"><a href="tel:+9779807440817"><li>980-7440817</li></a></span>
+                 <li>Bhagwati Tole, Butwal</li>
+                 <li>info@chiyabagan.com</li>
+                <div class="flex justify-center gap-2 md:gap-0 lg:gap-2 object-fill p-3 ">
+                    <a href="https://www.facebook.com/p/CHIYA-BAGAN-61555735625987/"><img   class="size-8 hover:transform hover:scale-105 duration-300" src="./images/facebook.png"   alt=""></a>
+                   <a href="https://www.instagram.com/https%3A%2F%2Fwww.instagram.com%2Fchiya_bagan%3Figsh%3DMWM2MjdyOHFyMXhn%26utm_source%3Dqr?fbclid=IwY2xjawLlWdlleHRuA2FlbQIxMQBicmlkETF1WTFtV3JzOEJNUDY1SUQ2AR7Nu5EiQbCht0NWC8W8VjRh7sN16TpccDfiI0LSwomzE9VDKqDrZbMTFvviJQ_aem_91H-OjMD-e_u1znyXOAp-Q"> <img  class="size-8 hover:transform hover:scale-105 duration-300" src="./images/instagram.png"  alt=""></a>
+                    <a href="https://www.tiktok.com/discover/chiya-bagan-butwal-shivnagar"><img  class="size-8 hover:transform hover:scale-105 duration-300" src="./images/tiktok.png"  alt=""></a>
+                    <a href="#"><img  class="size-8 hover:transform hover:scale-105 duration-300" src="./images/mail.png"  alt=""></a>
+                    
+                </div>
+            </div>
+         
+        </div>
+
+        <footer class="text-center p-7 text-xl">Chiya Bagan. ©2025. All Rights Reserved.</footer>
+    </section>
+
+
+
+
+
+    <script  src="./script.js"></script>
+
+
+</body>
+
+</html>

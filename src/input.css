@@ -1,0 +1,259 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import "tailwindcss";
+
+
+
+ 
+
+@layer components {
+
+
+ 
+.no-scrollbar::-webkit-scrollbar{
+  display: none;
+}
+.no-scrollbar{
+  -ms-overflow-style: none ;
+  scrollbar-width: none;
+}
+
+  .auto-slide {
+    @apply animate-[slideIn_1s_ease-in-out];
+  }
+
+#navbar.inscroll{
+  animation: slideIn 2s ease-out forwards;
+}
+
+  #AnimateMe.in-view{
+ animation: translatee 1s ease forwards ;
+}
+
+#cup.in-view 
+{
+   animation: translate 1s ease forwards;
+   
+} 
+
+  #AnimateMe2.in-view{
+ animation: translate 1s ease forwards ;
+}
+
+#cup2.in-view 
+{
+   animation: translatee 1s ease forwards;
+   
+} 
+
+ #AnimateMe3.in-view{
+ animation: translate 1s ease forwards ;
+}
+
+#cup3.in-view 
+{
+   animation: translatee 1s ease forwards;
+   
+} 
+
+#kitchen22.in-view > #kitchen2{
+  animation: slideIn 1s ease forwards;
+}
+
+#p1.in-view{
+@apply animate-translate
+}
+
+#p2.in-view>#p_2{
+  @apply max-sm:animate-translatee animate-slideUpp
+}
+
+#p3.in-view{
+  @apply max-sm:animate-translate animate-translatee
+}
+
+#p4.in-view{
+  @apply animate-translatee
+}
+
+#p5.in-view{
+  @apply animate-translate
+}
+
+
+.SlideInX{
+  display: flex;
+ animation: slideInX 1s ease-out forwards;
+ @apply backdrop-blur-[15px]
+}
+
+.SlideOut{
+animation: slideOutX 1.5s ease-out forwards;
+@apply backdrop-blur-[15px]
+}
+}
+
+
+
+
+ @layer base{
+  li{
+    @apply hover:text-amber-300 text-[#12304b] text-[18px]  cursor-pointer list-none ;
+  }
+}
+
+
+
+
+@layer utilities{
+  #footer1 h3{
+    @apply text-[28px] md:text-[20px] xl:text-[28px] font-bold font-[var(--font-custom)] mb-5;
+  }
+
+   #footer1 li{
+    @apply hover:text-amber-300 text-[#12304b] text-[18px] md:text-[16px]  cursor-pointer list-none ;
+  }
+  
+}
+
+
+
+   @theme {
+  
+  
+--font-Montserrat: "Montserrat","italic";
+
+
+--animate-scaleup:scaleup 5s infinite;
+@keyframes scaleup {
+  0% {
+   rotate: 5deg; 
+  }
+ 50%{
+  rotate: -5deg;
+ }
+  100%{
+    rotate:5deg;
+  }
+}
+  --animate-translate: translate 0.8s ease-in-out forwards;
+@keyframes translate {
+  0%{
+    opacity:0;
+}
+100%{
+  transform:translateX(80%);
+  opacity: 1;
+}}
+
+@keyframes slideInX{
+   from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+   
+  }
+}
+--animate-slideInX: slideInX 1s ease;
+
+--animate-tealeave:tealeave 3s ease-in-out infinite;
+@keyframes tealeave {
+  0% {
+transform: translate(0px) scale(0.9) rotate(5deg);
+
+  }
+ 50%{
+  transform: translate(20px) scale(1.1) rotate(-5deg);
+ }
+  100%{
+   transform: translate(0px) scale(0.9) rotate(5deg);
+  
+  }
+}
+
+
+@keyframes slideOutX{
+   from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+--animate-slideOutX: slideOutX 1s ease;
+
+  --animate-translatee: translatee 0.8s ease-out forwards;
+@keyframes translatee {
+  0%{
+   transform:translateX(0);
+    opacity:0;
+}
+100%{
+  transform:translateX(-80%);
+  opacity: 1;
+}}
+
+@keyframes Text{
+  from{
+  
+  opacity: 0;
+    
+  }
+  to{
+    transform:translateY(-30%);
+    
+    opacity: 1;
+  }
+}
+--animate-Text: Text 1s ease forwards;
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+   
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(10%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUpp {
+  from {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(-80%);
+    opacity: 1;
+  }
+}
+
+@keyframes slideUppp {
+  to {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+
+--animate-slideIn: slideIn 0.8s ease forwards ;
+--animate-slideUp: slideUp 0.8s ease-out forwards;
+--animate-slideUpp: slideUpp 0.8s ease-out forwards;
+--animate-slideUppp: slideUppp 1s ease-out forwards;
+}
